@@ -1,0 +1,11 @@
+<div class="top-bar">
+    <p class="greeting" *ngIf="user">
+        Hello, {{ user.firstName ? user.firstName : user.username }}
+    </p>
+
+    <ul class="top-bar-controls">
+        <li *ngFor="let element of topNavElements">
+            <div>{{element.name}}</div>
+        </li>
+    </ul>
+</div>

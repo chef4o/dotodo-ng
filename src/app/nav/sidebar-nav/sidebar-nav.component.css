@@ -1,0 +1,105 @@
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 6vw;
+    height: 100vh;
+    min-height: 465px;
+    padding: 3vh 0 0;
+    background-color: var(--color-menu-orange);
+    box-shadow: var(--left-box-shadow);
+}
+
+.sidebar .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar #logo {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar #logo img {
+    width: 4vw;
+    height: 4vw;
+    margin-bottom: 3vh;
+}
+
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar .menu li {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6vh 0 1.2vh;
+    width: 100%;
+}
+
+.sidebar .menu li.active {
+    box-shadow: var(--left-box-shadow), var(--bottom-box-shadow);
+    z-index: 10;
+    width: 110%;
+}
+
+.sidebar .menu li.active>a i {
+    color: white;
+}
+
+.sidebar .menu li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+}
+
+.sidebar .menu li i {
+    font-size: 3vw;
+    padding-bottom: 0.4vh;
+}
+
+.sidebar .menu li i.active {
+    color: white;
+}
+
+.sidebar .menu .home i {
+    color: var(--color-menu-icon-green-olive);
+}
+
+.sidebar .menu .notes i {
+    color: var(--color-menu-icon-tobaco);
+}
+
+.sidebar .menu .checklists i {
+    color: var(--color-menu-icon-beige);
+}
+
+.sidebar .menu .events i {
+    color: var(--color-menu-icon-green-light);
+}
+
+.sidebar .menu .profile i {
+    color: var(--color-menu-icon-green-dark);
+}
+
+.sidebar .menu li:hover {
+    cursor: pointer;
+}
+
+.sidebar .menu li:hover>a>i {
+    color: white;
+}
+
+app-connect-nav {
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+}

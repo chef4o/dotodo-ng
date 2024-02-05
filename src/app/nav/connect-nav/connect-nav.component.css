@@ -1,0 +1,16 @@
+.connect {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    z-index: 15;
+}
+
+.connect i {
+    font-size: 1vw;
+    padding: 0.8vh 0;
+    color: var(--color-menu-icon-orange);
+}
+
+.connect i:hover {
+    color: var(--color-menu-icon-orange-dark);
+}

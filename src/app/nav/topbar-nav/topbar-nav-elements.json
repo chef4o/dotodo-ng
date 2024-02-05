@@ -1,0 +1,11 @@
+[
+  {
+    "name": "login"
+  },
+  {
+    "name": "register"
+  },
+  {
+    "name": "logout"
+  }
+]

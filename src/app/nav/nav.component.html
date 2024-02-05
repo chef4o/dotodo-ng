@@ -1,0 +1,12 @@
+<div class="nav">
+    <!-- show/hide login/register modal based on the showAuthModal property -->
+    <ng-container *ngIf="showAuthModal.login || showAuthModal.register">
+        <div class="backdrop" (click)="hideAuthModal()"></div>
+    </ng-container>
+
+    <app-login-modal *ngIf="showAuthModal.login"></app-login-modal>
+    <app-register-modal *ngIf="showAuthModal.register"></app-register-modal>
+
+    <app-topbar-nav></app-topbar-nav>
+    <app-sidebar-nav></app-sidebar-nav>
+</div>

@@ -9,6 +9,8 @@ import { SidebarNavComponent } from './nav/sidebar-nav/sidebar-nav.component';
 import { LoginModalComponent } from './auth/login-modal/login-modal.component';
 import { RegisterModalComponent } from './auth/register-modal/register-modal.component';
 import { ConnectNavComponent } from './nav/connect-nav/connect-nav.component';
+import { AuthComponent } from './auth/auth.component';
+import { BottombarNavComponent } from './nav/bottombar-nav/bottombar-nav.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ConnectNavComponent } from './nav/connect-nav/connect-nav.component';
     TopbarNavComponent,
     SidebarNavComponent,
     ConnectNavComponent,
+    BottombarNavComponent,
+    AuthComponent,
     LoginModalComponent,
     RegisterModalComponent,
   ],

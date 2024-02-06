@@ -1,14 +1,3 @@
-.backdrop {
-    display: block;
-    position: absolute;
-    width: 90vw;
-    height: 100%;
-    left: 44%;
-    transform: translate(-50%, 0);
-    backdrop-filter: blur(3px);
-    z-index: 20;
-}
-
 .home,
 .about,
 .contacts,

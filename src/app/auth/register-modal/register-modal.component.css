@@ -1,0 +1,12 @@
+.auth-form.register {
+    height: 16vw;
+    min-height: 180px;
+}
+
+.auth-form button.register {
+    background-color: white;
+    width: 6vw;
+    bottom: 0.6vw;
+    font-size: 1vw;
+    border-radius: 0.1vw;
+}

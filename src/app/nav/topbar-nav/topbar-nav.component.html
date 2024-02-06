@@ -5,7 +5,8 @@
 
     <ul class="top-bar-controls">
         <li *ngFor="let element of topNavElements">
-            <div>{{element.name}}</div>
+            <div *ngIf="element.name === 'login' || element.name === 'register'" (click)="showLoginModal">{{element.name}}</div>
+            <div *ngIf="element.name != 'login' && element.name != 'register'" (click)="showRegisterModal">{{element.name}}</div>
         </li>
     </ul>
 </div>

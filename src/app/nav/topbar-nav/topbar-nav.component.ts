@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 const topNav = require('./topbar-nav-elements.json');
 
 @Component({
@@ -8,5 +8,9 @@ const topNav = require('./topbar-nav-elements.json');
 })
 export class TopbarNavComponent {
   topNavElements = topNav;
-  user: { firstName?: string, username?: string } | undefined = undefined;
+  user: { firstName?: string; username?: string } | undefined = undefined;
+
+  @Input() showLoginModal!: boolean;
+  @Input() showRegisterModal!: boolean;
+  @Input() hideAuthModal!: () => void;
 }

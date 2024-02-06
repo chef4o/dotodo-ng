@@ -1,0 +1,12 @@
+.auth-form.login {
+    height: 10vw;   
+    min-height: 120px;
+}
+
+.auth-form button.login {
+    background-color: white;
+    width: 6vw;
+    bottom: 0.6vw;
+    font-size: 1vw;
+    border-radius: 0.1vw;
+}

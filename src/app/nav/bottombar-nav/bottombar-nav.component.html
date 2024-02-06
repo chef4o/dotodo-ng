@@ -1,6 +1,5 @@
 <ul class="bottom-bar">
-    <li>
+    <li *ngFor="let item of bottomNavElements">
         <a href={{item.name}}>{{item.name}}</a>
-        <Link to={item.name} onClick={()=> handleNavigationClick(item.name)}></Link>
     </li>
 </ul>

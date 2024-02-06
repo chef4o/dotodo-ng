@@ -1,1 +1,8 @@
-<p>auth works!</p>
+<ng-container *ngIf="showLoginModal || showRegisterModal">
+    <div class="backdrop" (click)="hideAuthModal()"></div>
+</ng-container>
+
+<app-login-modal [hideAuthModal]="hideAuthModal"
+    *ngIf="showLoginModal"></app-login-modal>
+<app-register-modal [hideAuthModal]="hideAuthModal"
+    *ngIf="showRegisterModal"></app-register-modal>

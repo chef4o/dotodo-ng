@@ -10,7 +10,6 @@ export class AuthComponent {
   showRegisterModal = true;
 
   hideAuthModal(): void {
-
     this.showLoginModal = false;
     this.showRegisterModal = false;
   }

@@ -12,6 +12,7 @@ import { RegisterModalComponent } from './auth/register-modal/register-modal.com
 import { ConnectNavComponent } from './nav/connect-nav/connect-nav.component';
 import { AuthComponent } from './auth/auth.component';
 import { BottombarNavComponent } from './nav/bottombar-nav/bottombar-nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BottombarNavComponent } from './nav/bottombar-nav/bottombar-nav.compone
     AuthComponent,
     LoginModalComponent,
     RegisterModalComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

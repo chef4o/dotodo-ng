@@ -2,15 +2,15 @@
 .about,
 .contacts,
 .news {
-    background-color: var(--color-menu-green-olive);
+    background-color: var(--color-menu-cool-gray);
 }
 
 .notes {
-    background-color: var(--color-menu-tobaco);
+    background-color: var(--color-menu-soft-sky-blue);
 }
 
 .checklists {
-    background-color: var(--color-menu-beige);
+    background-color: var(--color-menu-creamy-peach);
 }
 
 .events {

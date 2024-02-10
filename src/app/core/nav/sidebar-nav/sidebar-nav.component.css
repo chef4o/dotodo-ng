@@ -8,29 +8,29 @@
     height: 100vh;
     min-height: 465px;
     padding: 3vh 0 0;
-    background-color: var(--color-menu-orange);
+    background-color: var(--color-menu-pale-silver);
     box-shadow: var(--left-box-shadow);
 }
 
-.sidebar .navigation {
+.navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.sidebar #logo {
+#logo {
     display: flex;
     justify-content: center;
 }
 
-.sidebar #logo img {
+#logo img {
     width: 4vw;
     height: 4vw;
     margin-bottom: 3vh;
 }
 
-.sidebar .menu {
+.menu {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -38,63 +38,88 @@
     text-align: center;
 }
 
-.sidebar .menu li {
+.menu li {
     display: flex;
     flex-direction: column;
     padding: 1.6vh 0 1.2vh;
     width: 100%;
 }
 
-.sidebar .menu li.active {
+.menu li.active {
     box-shadow: var(--left-box-shadow), var(--bottom-box-shadow);
     z-index: 10;
     width: 110%;
 }
 
-.sidebar .menu li.active>a i {
+.menu li i.active {
     color: white;
 }
 
-.sidebar .menu li a {
+li.home {
+    background-color: var(--color-menu-cool-gray);
+}
+
+li.notes {
+    background-color: var(--color-menu-soft-sky-blue);
+}
+
+li.checklists {
+    background-color: var(--color-menu-creamy-peach);
+}
+
+li.events {
+    background-color: var(--color-menu-green-light);
+}
+
+li.profile {
+    background-color: var(--color-menu-soft-gray);
+}
+
+
+.menu li.active>a i {
+    color: white;
+}
+
+.menu li a {
     color: white;
     text-transform: uppercase;
     font-size: 0.9vw;
 }
 
-.sidebar .menu li i {
+.menu li i {
     font-size: 3vw;
     padding-bottom: 0.4vh;
 }
 
-.sidebar .menu li i.active {
+.menu li i.active {
     color: white;
 }
 
-.sidebar .menu .home i {
-    color: var(--color-menu-icon-green-olive);
+.menu .home i {
+    color: var(--color-menu-icon-cool-gray);
 }
 
-.sidebar .menu .notes i {
-    color: var(--color-menu-icon-tobaco);
+.menu .notes i {
+    color: var(--color-menu-icon-soft-sky-blue);
 }
 
-.sidebar .menu .checklists i {
-    color: var(--color-menu-icon-beige);
+.menu .checklists i {
+    color: var(--color-menu-icon-creamy-peach);
 }
 
-.sidebar .menu .events i {
+.menu .events i {
     color: var(--color-menu-icon-green-light);
 }
 
-.sidebar .menu .profile i {
-    color: var(--color-menu-icon-green-dark);
+.menu .profile i {
+    color: var(--color-menu-dark-soft-gray);
 }
 
-.sidebar .menu li:hover {
+.menu li:hover {
     cursor: pointer;
 }
 
-.sidebar .menu li:hover>a>i {
+.menu li:hover>a>i {
     color: white;
 }
 

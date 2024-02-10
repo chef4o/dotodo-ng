@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AuthComponent {
   showLoginModal = false;
-  showRegisterModal = true;
+  showRegisterModal = false;
 
   hideAuthModal(): void {
     this.showLoginModal = false;

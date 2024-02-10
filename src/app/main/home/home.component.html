@@ -1,0 +1,27 @@
+<div class="home">
+    <div class="intro">
+        <h3>
+            Welcome to your very own<span> DOTODO Persoanl assistant </span>!
+            Our aim is to keep you<span> up-to-date </span>
+            with your ongoing tasks and keep all your activities
+            <span> on track</span>.
+        </h3>
+        <p>
+            Our user-friendly task management platform empowers you to create,
+            prioritize, and track tasks effortlessly, ensuring you never forget
+            a thing or miss a deadline again. To unlock the full potential of our
+            task management platform and enjoy personalized features, we invite you
+            to<a class="register" (click)="showRegisterModal"> create an account </a>or
+            simply<a class="login" (click)="showLoginModal"> log in </a>if you&apos;re
+            already a registered member.
+        </p>
+    </div>
+
+    <div class="featured-img"></div>
+
+    <ul class="options">
+        <ng-container *ngFor="let type of types">
+            <app-task-type [task]="type"></app-task-type>
+        </ng-container>
+    </ul>
+</div>

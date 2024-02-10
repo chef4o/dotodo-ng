@@ -1,4 +1,5 @@
 .connect {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0 10%;
@@ -8,9 +9,9 @@
 .connect i {
     font-size: 1vw;
     padding: 0.8vh 0;
-    color: var(--color-menu-icon-orange);
+    color: var(--color-body-background);
 }
 
 .connect i:hover {
-    color: var(--color-menu-icon-orange-dark);
+    color: var(--color-ivory);
 }

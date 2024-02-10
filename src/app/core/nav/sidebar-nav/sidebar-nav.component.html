@@ -1,17 +1,20 @@
 <div class="sidebar">
     <div class="navigation">
-        <a href="/" id="logo"><img src="assets/images/logo.png" alt="DOTODO" /></a>
+        <a href="/" id="logo"><img src="assets/images/logo_dark.png" alt="DOTODO" /></a>
 
         <ul class="menu">
-            <li *ngFor="let element of sidebarNavElements">
-                <ng-container *ngIf="element.name !== 'profile' || user">
-                    <a [class.active]="selectedPageBg === element.name" [class]="element.name" href="{{element.href}}">
+            <ng-container *ngFor="let element of sidebarNavElements">
+                <li *ngIf="element.name !== 'profile' || loggedUser" [class.active]="selectedPageBg === element.name"
+                    [class]="element.name">
+
+                    <a href="{{element.href}}">
                         <i class="{{element.icon}}"></i><br />{{element.name}}
                     </a>
-                </ng-container>
-            </li>
+
+                </li>
+            </ng-container>
         </ul>
-        
+
         <app-connect-nav></app-connect-nav>
     </div>
 </div>

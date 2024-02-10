@@ -1,0 +1,85 @@
+li {
+    display: flex;
+    flex-direction: column;
+    width: 17.6vw;
+    box-shadow: var(--left-box-shadow);
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 15.6vw;
+    height: 12vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+li h4 {
+    text-align: right;
+    font-weight: bold;
+    padding: 0.4vw 0.8vw;
+    color: white;
+}
+
+
+.header-text {
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    color: white;
+    font-size: 0.9vw;
+    padding: 0.4vw 0.8vw;
+}
+
+.notes:hover .header-text,
+.checklists:hover .header-text,
+.events:hover .header-text {
+    display: block;
+}
+
+.notes {
+    background-image: url('/assets/images/note.png');
+}
+
+.notes h4 {
+    background: linear-gradient(to right, transparent, var(--color-menu-soft-sky-blue) 80%);
+}
+
+.notes .header-text {
+    background: linear-gradient(to right, transparent, var(--color-menu-soft-sky-blue) 50%);
+}
+
+.checklists {
+    background-image: url('/assets/images/to-do.png');
+}
+
+.checklists h4 {
+    background: linear-gradient(to right, transparent, var(--color-menu-creamy-peach) 80%);
+}
+
+.checklists .header-text {
+    background: linear-gradient(to right, transparent, var(--color-menu-creamy-peach) 50%);
+}
+
+.events {
+    background-image: url('/assets/images/calendar.png');
+}
+
+.events h4 {
+    background: linear-gradient(to right, transparent, var(--color-menu-green-light) 80%);
+}
+
+.events .header-text {
+    background: linear-gradient(to right, transparent, var(--color-menu-green-light) 50%);
+}

@@ -6,9 +6,6 @@
     position: absolute;
     height: 3.5vh;
     width: 70.9vw;
-}
-
-.bottom-bar {
     bottom: 0;
     z-index: 10;
 }

@@ -10,7 +10,8 @@ export class SidebarNavComponent {
   sidebarNavElements = sidebarNav;
 
   user: any;
+  loggedUser = true;
   
   //change background according to the logic
-  selectedPageBg = true;
+  selectedPageBg = "home";
 }

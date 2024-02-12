@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
+import { IChecklist } from '../interfaces/checklist';
 
 const baseUrl = environment.apiUrl + '/users';
 
@@ -11,7 +12,7 @@ export class ChecklistService {
   constructor(private http: HttpClient) {}
 
   getAllChecklists(userID: string) {
-    return this.http.get(`${baseUrl}/${userID}/checklists`);
+    return this.http.get<IChecklist>(`${baseUrl}/${userID}/checklists`);
   }
 
   // export const getCheckListByUserAndId = async (userID, id) => {

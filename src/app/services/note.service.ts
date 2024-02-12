@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
+import { INote } from '../interfaces/note';
 
 const baseUrl = environment.apiUrl + '/users';
 
@@ -11,7 +12,7 @@ export class NoteService {
   constructor(private http: HttpClient) {}
 
   getAllNotes(userId: string) {
-    return this.http.get(`${baseUrl}/${userId}/notes`);
+    return this.http.get<INote>(`${baseUrl}/${userId}/notes`);
   }
 
   // export const getSomeNotesByDueDateDesc = async (userId, numberOfResults) => {

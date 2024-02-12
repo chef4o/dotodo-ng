@@ -1,26 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 
-const baseUrl = 'http://localhost:3030/jsonstore/users';
+const baseUrl = environment.apiUrl + '/users';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  getAllUsers = async () => {
-    return this.http.get<any>(baseUrl);
-  };
+  getAllUsers() {
+    return this.http.get(baseUrl);
+  }
 
-  //   findUserById = async (id) => {
-  //     const response = await request.get(`${baseUrl}/${id}`);
-  //   };
+  getUserById(id: string) {
+    return this.http.get(`${baseUrl}/${id}`);
+  }
 
-  //   findUserByEmail = async (email) => {
-  //     const user = await getAllUsers();
-  //     return user.find((user) => user.email === email);
-  //   };
+  getUserByEmail(email: string) {
+    const user = this.getAllUsers();
+    // filter user by email
+  }
 
   //   findUserByUsername = async (username) => {
   //     const user = await getAllUsers();

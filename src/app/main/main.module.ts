@@ -37,5 +37,6 @@ import { ContactsComponent } from './contacts/contacts.component';
     ContactsComponent,
   ],
   imports: [CommonModule],
+  exports: [HomeComponent],
 })
 export class MainModule {}

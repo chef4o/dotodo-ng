@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileNoteComponent } from './profile-note.component';
+import { SharedComponent } from './shared.component';
 
-describe('ProfileNoteComponent', () => {
-  let component: ProfileNoteComponent;
-  let fixture: ComponentFixture<ProfileNoteComponent>;
+describe('SharedComponent', () => {
+  let component: SharedComponent;
+  let fixture: ComponentFixture<SharedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileNoteComponent ]
+      declarations: [ SharedComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProfileNoteComponent);
+    fixture = TestBed.createComponent(SharedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

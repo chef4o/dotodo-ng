@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UserService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class NavComponent {
 
+  
 }

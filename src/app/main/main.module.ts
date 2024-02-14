@@ -16,6 +16,7 @@ import { ChecklistItemComponent } from './checklists/checklist/checklist-item/ch
 import { EmptyChecklistComponent } from './checklists/checklist/empty-checklist/empty-checklist.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     AboutUsComponent,
     ContactsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   exports: [
     HomeComponent,
     EventsComponent,

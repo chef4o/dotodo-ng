@@ -10,3 +10,27 @@
     font-size: 1vw;
     border-radius: 0.1vw;
 }
+
+.loading {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 32vw;
+    top: 24vh;
+    z-index: 50;
+    width: 22vw;
+    height: 16vw;
+}
+
+::ng-deep .loading .lds-default {
+    left: 4.4vw;
+}
+
+.loading p {
+    position: absolute;
+    bottom: 0;
+    color: var(--color-body-background);
+    text-align: center;
+    font-size: 2.6vw;
+}

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UserService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-auth',
@@ -6,6 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent {
+
+  constructor(private userService: UserService) {}
+
   showLoginModal = false;
   showRegisterModal = false;
 

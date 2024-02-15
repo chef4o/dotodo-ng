@@ -8,6 +8,7 @@ import { SharedComponent } from './shared/shared.component';
 import { SharedModule } from './shared/shared.module';
 import { MainModule } from './main/main.module';
 import { MainComponent } from './main/main.component';
+import { GlobalLoaderService } from './services/global-loader.service';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent, MainComponent],
@@ -17,7 +18,7 @@ import { MainComponent } from './main/main.component';
     HttpClientModule,
     CoreModule,
     SharedModule,
-    MainModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent],

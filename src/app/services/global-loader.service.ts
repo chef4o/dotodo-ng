@@ -16,10 +16,10 @@ export class GlobalLoaderService {
   showLoader(title: string): void {
     switch (title) {
       case 'login':
-        this.loader = { title: 'login', text: 'Logging in...' };
+        this.loader = { title: 'login', text: 'Logging in' };
         break;
       case 'register':
-        this.loader = { title: 'register', text: 'Creating account...' };
+        this.loader = { title: 'register', text: 'Creating account' };
         break;
       default:
         break;

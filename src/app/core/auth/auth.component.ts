@@ -9,17 +9,27 @@ import { UserService } from 'src/app/services/users.service';
 })
 export class AuthComponent {
 
-  showLoginModal = true;
-  showRegisterModal = false;
-  isLoading = true;
+  showLoginScreen = false;
+  showRegisterScreen = false;
+  isLoading = false;
 
   constructor(private userService: UserService, private loaderService: GlobalLoaderService) {
     this.loaderService.showLoader('login');
   }
 
+  showLoginModal(): void {
+    this.showLoginScreen = true;
+    this.showRegisterScreen = false;
+  }
+
+  showRegisterModal(): void {
+    this.showRegisterScreen = true;
+    this.showLoginScreen = false;
+  }
+
   hideAuthModal(): void {
-    this.showLoginModal = false;
-    this.showRegisterModal = false;
+    this.showLoginScreen = false;
+    this.showRegisterScreen = false;
     this.isLoading = false;
   }
 }

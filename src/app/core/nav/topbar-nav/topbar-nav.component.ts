@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-const topNav = require('./topbar-nav-elements.json');
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-topbar-nav',
@@ -7,10 +6,13 @@ const topNav = require('./topbar-nav-elements.json');
   styleUrls: ['./topbar-nav.component.css'],
 })
 export class TopbarNavComponent {
-  topNavElements = topNav;
-  user: { firstName?: string; username?: string } | undefined = undefined;
 
-  @Input() showLoginModal!: boolean;
-  @Input() showRegisterModal!: boolean;
+  user: any;
+  
+  constructor() {
+    this.user = true;
+  }
+
   @Input() hideAuthModal!: () => void;
+  
 }

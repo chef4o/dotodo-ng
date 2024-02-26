@@ -8,5 +8,7 @@ import { UserService } from 'src/app/services/users.service';
 })
 export class NavComponent {
 
-  
+  constructor() {
+    
+  }
 }

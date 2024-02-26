@@ -10,6 +10,7 @@ import { LoginModalComponent } from './auth/login-modal/login-modal.component';
 import { RegisterModalComponent } from './auth/register-modal/register-modal.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SharedModule } from '../shared/shared.module';
     RegisterModalComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, RouterModule],
   exports: [NavComponent, FooterComponent],
 })
 export class CoreModule {}

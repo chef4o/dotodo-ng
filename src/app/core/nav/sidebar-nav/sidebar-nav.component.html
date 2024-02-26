@@ -1,13 +1,13 @@
 <div class="sidebar">
     <div class="navigation">
-        <a href="/" id="logo"><img src="assets/images/logo_dark.png" alt="DOTODO" /></a>
+        <a routerLink="/" id="logo"><img src="assets/images/logo_dark.png" alt="DOTODO" /></a>
 
         <ul class="menu">
             <ng-container *ngFor="let element of sidebarNavElements">
                 <li *ngIf="element.name !== 'profile' || loggedUser" [class.active]="selectedPageBg === element.name"
                     [class]="element.name">
 
-                    <a href="{{element.href}}">
+                    <a routerLink="{{element.href}}">
                         <i class="{{element.icon}}"></i><br />{{element.name}}
                     </a>
 

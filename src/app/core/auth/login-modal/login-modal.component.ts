@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { GlobalLoaderService } from 'src/app/services/global-loader.service';
-import { UserService } from 'src/app/services/users.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login-modal',

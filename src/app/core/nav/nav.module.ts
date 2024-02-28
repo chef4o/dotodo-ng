@@ -65,11 +65,7 @@ import { NewsComponent } from 'src/app/main/news/news.component';
     ]),
   ],
   exports: [
-    NavComponent,
-    BottombarNavComponent,
-    ConnectNavComponent,
-    SidebarNavComponent,
-    TopbarNavComponent,
+    NavComponent
   ],
 })
 export class NavModule {}

@@ -1,4 +1,4 @@
-<a [href]="'/' + task.name">
+<a routerLink="/{{task.name.toLocaleLowerCase()}}">
     <li class="{{task.name.toLocaleLowerCase()}}">
         <h4>{{task.name}}</h4>
         <h3 class="header-text">{{task.headerText}}</h3>

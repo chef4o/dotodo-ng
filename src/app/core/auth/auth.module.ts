@@ -22,6 +22,6 @@ import { RouterModule } from '@angular/router';
       },
     ]),
   ],
-  exports: [AuthComponent, LoginModalComponent, RegisterModalComponent],
+  exports: [AuthComponent],
 })
 export class AuthModule {}

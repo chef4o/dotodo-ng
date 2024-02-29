@@ -33,7 +33,6 @@
 .menu {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: 100%;
     text-align: center;
 }
@@ -43,12 +42,17 @@
     flex-direction: column;
     padding: 1.6vh 0 1.2vh;
     width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9vw;
 }
 
 .menu li.active {
-    box-shadow: var(--left-box-shadow), var(--bottom-box-shadow);
+    position: relative;
     z-index: 10;
+    box-shadow: var(--left-box-shadow), var(--bottom-box-shadow);
     width: 110%;
+    margin-left: -0.6vw;
 }
 
 .menu li i.active {
@@ -75,15 +79,8 @@ li.profile {
     background-color: var(--color-menu-soft-gray);
 }
 
-
-.menu li.active>a i {
+.menu a>li.active>i {
     color: white;
-}
-
-.menu li a {
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9vw;
 }
 
 .menu li i {
@@ -115,11 +112,11 @@ li.profile {
     color: var(--color-menu-dark-soft-gray);
 }
 
-.menu li:hover {
+.menu a:hover {
     cursor: pointer;
 }
 
-.menu li:hover>a>i {
+.menu a:hover>li>i {
     color: white;
 }
 

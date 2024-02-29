@@ -4,14 +4,16 @@
 
         <ul class="menu">
             <ng-container *ngFor="let element of sidebarNavElements">
-                <li *ngIf="element.name !== 'profile' || loggedUser" [class.active]="selectedPageBg === element.name"
-                    [class]="element.name">
+                <a routerLink="{{element.href}}">
+                    <li *ngIf="element.name !== 'profile' || loggedUser"
+                        [class.active]="selectedPageBg === element.name" [class]="element.name">
 
-                    <a routerLink="{{element.href}}">
-                        <i class="{{element.icon}}"></i><br />{{element.name}}
-                    </a>
+                        <i class="{{element.icon}}"></i>
+                        <br />
+                        {{element.name}}
+                    </li>
+                </a>
 
-                </li>
             </ng-container>
         </ul>
 

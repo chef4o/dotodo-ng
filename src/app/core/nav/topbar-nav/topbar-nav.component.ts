@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-topbar-nav',
@@ -8,11 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class TopbarNavComponent {
 
   user: any;
-  
+
   constructor() {
     this.user = true;
   }
 
-  @Input() hideAuthModal!: () => void;
-  
+  @Input() showLoginModal!: () => void;
+  @Input() showRegisterModal!: () => void;
+
 }

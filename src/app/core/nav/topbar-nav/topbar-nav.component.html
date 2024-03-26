@@ -6,11 +6,11 @@
     <ul class="top-bar-controls">
 
         <ng-container *ngIf="user">
-            <li>
-                <div>login</div>
+            <li (click)="showLoginModal()">
+                <a routerLink="auth/login">login</a>
             </li>
-            <li>
-                <div>register</div>
+            <li (click)="showRegisterModal()">
+                <a routerLink="auth/register">register</a>
             </li>
         </ng-container>
         <ng-container *ngIf="!user">

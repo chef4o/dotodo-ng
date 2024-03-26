@@ -11,17 +11,19 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild([
-      {
-        path: 'auth/login',
-        component: LoginModalComponent,
-      },
-      {
-        path: 'auth/register',
-        component: RegisterModalComponent,
-      },
-    ]),
+    RouterModule.forChild(
+      [
+        {
+          path: 'auth/login',
+          component: AuthComponent
+        },
+        {
+          path: 'auth/register',
+          component: AuthComponent
+        },
+      ]
+    )
   ],
   exports: [AuthComponent],
 })
-export class AuthModule {}
+export class AuthModule { }

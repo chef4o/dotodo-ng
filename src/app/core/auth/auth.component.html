@@ -2,9 +2,9 @@
     <div class="backdrop" (click)="hideAuthModal()"></div>
 </ng-container>
 
-<app-login-modal [hideAuthModal]="hideAuthModal"
-    *ngIf="showLoginScreen"></app-login-modal>
-<app-register-modal [hideAuthModal]="hideAuthModal"
+<app-login-modal
+    *ngIf="showLoginScreen" [hideAuthModal]="hideAuthModal"></app-login-modal>
+<app-register-modal
     *ngIf="showRegisterScreen"></app-register-modal>
     
 <div class="loading" *ngIf="isLoading">

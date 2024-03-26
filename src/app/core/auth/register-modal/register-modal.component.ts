@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RegisterModalComponent implements OnInit {
   @Input() isLoading!: boolean;
   @Input() hideAuthModal!: () => void;
+  @Input() showRegisterModal!: () => void;
 
   ngOnInit(): void {
       

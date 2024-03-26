@@ -7,7 +7,8 @@ import { CoreModule } from './core/core.module';
 import { SharedComponent } from './shared/shared.component';
 import { SharedModule } from './shared/shared.module';
 import { MainModule } from './main/main.module';
-import { GlobalLoaderService } from './services/global-loader.service';
+import { RouteReuseStrategy } from '@angular/router';
+import { CustomReuseStrategy } from './shared/custom-route-reuse-strategy';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent],
@@ -19,7 +20,12 @@ import { GlobalLoaderService } from './services/global-loader.service';
     SharedModule,
     MainModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: RouteReuseStrategy, 
+      useClass: CustomReuseStrategy
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

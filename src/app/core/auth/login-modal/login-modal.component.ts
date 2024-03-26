@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class LoginModalComponent {
   @Input() isLoading!: boolean;
   @Input() hideAuthModal!: () => void;  
-
+  @Input() showLoginModal!: () => void;
 }

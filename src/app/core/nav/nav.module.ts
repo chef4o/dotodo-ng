@@ -16,6 +16,7 @@ import { ProfileComponent } from 'src/app/main/profile/profile.component';
 import { AboutUsComponent } from 'src/app/main/about-us/about-us.component';
 import { ContactsComponent } from 'src/app/main/contacts/contacts.component';
 import { NewsComponent } from 'src/app/main/news/news.component';
+import { NavRoutingModule } from './nav-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,43 +29,11 @@ import { NewsComponent } from 'src/app/main/news/news.component';
   imports: [
     CommonModule,
     SharedModule,
-        RouterModule.forChild([
-      {
-        path: 'home',
-        component: HomeComponent,
-      },
-      {
-        path: 'notes',
-        component: NotesComponent,
-      },
-      {
-        path: 'checklists',
-        component: ChecklistsComponent,
-      },
-      {
-        path: 'events',
-        component: EventsComponent,
-      },
-      {
-        path: 'profile',
-        component: ProfileComponent,
-      },
-      {
-        path: 'about',
-        component: AboutUsComponent,
-      },
-      {
-        path: 'contacts',
-        component: ContactsComponent,
-      },
-      {
-        path: 'news',
-        component: NewsComponent,
-      },
-    ]),
+    AuthModule,
+    NavRoutingModule,
   ],
   exports: [
     NavComponent
   ],
 })
-export class NavModule {}
+export class NavModule { }

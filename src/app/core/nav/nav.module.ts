@@ -28,8 +28,7 @@ import { NewsComponent } from 'src/app/main/news/news.component';
   imports: [
     CommonModule,
     SharedModule,
-    AuthModule,
-    RouterModule.forChild([
+        RouterModule.forChild([
       {
         path: 'home',
         component: HomeComponent,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { GlobalLoaderService } from 'src/app/services/global-loader.service';
-import { UserService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-auth',
@@ -14,7 +14,7 @@ export class AuthComponent {
   isLoading = false;
 
   constructor(
-    private userService: UserService,
+    private authService: AuthService,
     private loaderService: GlobalLoaderService,
     private router: Router,
   ) {

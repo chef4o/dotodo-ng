@@ -5,19 +5,21 @@
 
     <ul class="top-bar-controls">
 
-        <ng-container *ngIf="user">
+        <ng-container *ngTemplateOutlet="user ? loggedInTemplate : loggedOutTemplate"></ng-container>
+
+        <ng-template #loggedInTemplate>
+            <li>
+                <div>logout</div>
+            </li>
+        </ng-template>
+
+        <ng-template #loggedOutTemplate>
             <li (click)="showLoginModal()">
                 <a routerLink="auth/login">login</a>
             </li>
             <li (click)="showRegisterModal()">
                 <a routerLink="auth/register">register</a>
             </li>
-        </ng-container>
-        <ng-container *ngIf="!user">
-            <li>
-                <div>logout</div>
-            </li>
-        </ng-container>
-
+        </ng-template>
     </ul>
 </div>

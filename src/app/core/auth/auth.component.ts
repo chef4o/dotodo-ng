@@ -21,7 +21,7 @@ export class AuthComponent {
   }
 
   showLoginModal(): void {
-    this.router.navigateByUrl('/auth/login');
+    this.router.navigateByUrl('auth/login');
     this.loaderService.showLoader('login');
 
     this.showLoginScreen = true;
@@ -30,7 +30,7 @@ export class AuthComponent {
   }
 
   showRegisterModal(): void {
-    this.router.navigateByUrl('/auth/register');
+    this.router.navigateByUrl('auth/register');
     this.loaderService.showLoader('register');
 
     this.showRegisterScreen = true;

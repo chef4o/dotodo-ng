@@ -6,17 +6,9 @@ import { ConnectNavComponent } from './connect-nav/connect-nav.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { TopbarNavComponent } from './topbar-nav/topbar-nav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
-import { HomeComponent } from 'src/app/main/home/home.component';
-import { NotesComponent } from 'src/app/main/notes/notes.component';
-import { ChecklistsComponent } from 'src/app/main/checklists/checklists.component';
-import { EventsComponent } from 'src/app/main/events/events.component';
-import { ProfileComponent } from 'src/app/main/profile/profile.component';
-import { AboutUsComponent } from 'src/app/main/about-us/about-us.component';
-import { ContactsComponent } from 'src/app/main/contacts/contacts.component';
-import { NewsComponent } from 'src/app/main/news/news.component';
 import { NavRoutingModule } from './nav-routing.module';
+import { AuthRoutingModule } from '../auth/auth-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +23,7 @@ import { NavRoutingModule } from './nav-routing.module';
     SharedModule,
     AuthModule,
     NavRoutingModule,
+    AuthRoutingModule,
   ],
   exports: [
     NavComponent

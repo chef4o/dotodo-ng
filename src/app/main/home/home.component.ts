@@ -8,9 +8,6 @@ const taskTypes = require('./taskTypes.json');
 })
 export class HomeComponent {
 
-  @Input() showLoginModal!: () => void;
-  @Input() showRegisterModal!: () => void;
-
   types = taskTypes;
 
 }

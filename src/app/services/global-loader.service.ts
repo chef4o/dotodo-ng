@@ -21,6 +21,9 @@ export class GlobalLoaderService {
       case 'register':
         this.loader = { title: 'register', text: 'Creating account' };
         break;
+      case 'loading':
+        this.loader = { title: 'loading', text: 'Loading' };
+        break;
       default:
         break;
     }

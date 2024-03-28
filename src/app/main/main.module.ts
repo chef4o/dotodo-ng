@@ -11,6 +11,7 @@ import { EventsModule } from './events/events.module';
 import { MainComponent } from './main.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CoreModule } from '../core/core.module';
+import { AuthRoutingModule } from '../core/auth/auth-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CoreModule } from '../core/core.module';
     ContactsComponent
   ],
   imports: [
+    AuthRoutingModule,
     CoreModule,
     CommonModule,
     SharedModule,

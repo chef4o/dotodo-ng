@@ -8,6 +8,7 @@ import { TopbarNavComponent } from './topbar-nav/topbar-nav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthModule } from '../auth/auth.module';
 import { RouterModule } from '@angular/router';
+import { NavRoutingModule } from './nav-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { RouterModule } from '@angular/router';
     TopbarNavComponent,
   ],
   imports: [
+    AuthModule,
     CommonModule,
     SharedModule,
-    AuthModule,
-    RouterModule
+    RouterModule,
+    NavRoutingModule
   ],
   exports: [
     NavComponent

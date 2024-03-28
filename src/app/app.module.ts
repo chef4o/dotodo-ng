@@ -7,16 +7,18 @@ import { CoreModule } from './core/core.module';
 import { SharedComponent } from './shared/shared.component';
 import { SharedModule } from './shared/shared.module';
 import { MainModule } from './main/main.module';
+import { AuthModule } from './core/auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    AuthModule,
     CoreModule,
     SharedModule,
     MainModule,
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
   bootstrap: [AppComponent],
 })

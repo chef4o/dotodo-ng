@@ -10,15 +10,17 @@ import { NotesModule } from './notes/notes.module';
 import { EventsModule } from './events/events.module';
 import { MainComponent } from './main.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
     MainComponent,
     NewsComponent,
     AboutUsComponent,
-    ContactsComponent,
+    ContactsComponent
   ],
   imports: [
+    CoreModule,
     CommonModule,
     SharedModule,
     HomeModule,
@@ -29,4 +31,4 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   exports: [MainComponent, NewsComponent, AboutUsComponent, ContactsComponent],
 })
-export class MainModule {}
+export class MainModule { }

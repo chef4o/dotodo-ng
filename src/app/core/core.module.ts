@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { NavModule } from './nav/nav.module';
 import { AuthModule } from './auth/auth.module';
-import { ErrorComponent } from './error/error.component';
+import { ErrorPageComponent } from '../main/error-page/error-page.component';
 
 @NgModule({
-  declarations: [FooterComponent, ErrorComponent],
+  declarations: [FooterComponent, ErrorPageComponent],
   imports: [CommonModule, NavModule, AuthModule],
-  exports: [NavModule, FooterComponent],
+  exports: [NavModule, FooterComponent, ErrorPageComponent],
 })
 export class CoreModule {}

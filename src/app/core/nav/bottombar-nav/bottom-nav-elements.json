@@ -1,11 +1,14 @@
 [
   {
-    "name": "about"
+    "name": "about",
+    "href": "/about-us"
   },
   {
-    "name": "contacts"
+    "name": "contacts",
+    "href": "/contacts"
   },
   {
-    "name": "news"
+    "name": "news",
+    "href": "/news"
   }
 ]

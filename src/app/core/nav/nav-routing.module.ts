@@ -12,34 +12,42 @@ const routes: Routes = [
     {
         path: 'about-us',
         component: AboutUsComponent,
+        data: { title: 'About DOTODO' }
     },
     {
         path: 'news',
         component: NewsComponent,
+        data: { title: 'DOTODO News' }
     },
     {
         path: 'contacts',
         component: ContactsComponent,
+        data: { title: 'DOTODO Contacts' }
     },
     {
         path: 'home',
         component: HomeComponent,
+        data: { title: 'DOTODO Task Manager' }
     },
     {
         path: 'events',
         component: EventsComponent,
+        data: { title: 'DOTODO Events' }
     },
     {
         path: 'notes',
         component: NotesComponent,
+        data: { title: 'DOTODO Notes' }
     },
     {
         path: 'checklists',
         component: ChecklistComponent,
+        data: { title: 'DOTODO Checklists' }
     },
     {
         path: 'profile',
         component: ProfileComponent,
+        data: { title: 'My DOTODO' }
     }
 ];
 

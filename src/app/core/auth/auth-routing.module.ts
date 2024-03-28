@@ -8,11 +8,13 @@ const routes: Routes = [
         children: [
             {
                 path: 'login',
-                component: AuthComponent
+                component: AuthComponent,
+                data: { title: 'Access DOTODO' }
             },
             {
                 path: 'register',
-                component: AuthComponent
+                component: AuthComponent,
+                data: { title: 'Sign-up with DOTODO' }
             },
             {
                 path: 'logout',

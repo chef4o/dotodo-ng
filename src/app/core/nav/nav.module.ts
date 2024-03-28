@@ -7,7 +7,7 @@ import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { TopbarNavComponent } from './topbar-nav/topbar-nav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthModule } from '../auth/auth.module';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

@@ -8,11 +8,13 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class TopbarNavComponent {
 
-  get user() {
-    return this.authService.user 
-  };
+  user: any;
 
   constructor(private authService: AuthService) {
+  }
+
+  ngOnChanges() {
+    this.user = this.authService.user;
   }
 
   @Input() showLoginModal!: () => void;

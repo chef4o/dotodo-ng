@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { BackgroundColorService } from 'src/app/core/nav/background-color.service';
 
 @Component({
   selector: 'app-task-type',
@@ -11,4 +12,7 @@ export class TaskTypeComponent {
     headerText: string;
     description: string;
   };
+
+  constructor(public backgroundService: BackgroundColorService) {
+  }
 }

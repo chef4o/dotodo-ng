@@ -12,7 +12,8 @@
   --color-menu-icon-soft-sky-blue: #4d5d6a;
   --color-menu-creamy-peach: #c1b09f;
   --color-menu-icon-creamy-peach: #847a70;
-  --color-menu-cool-gray: #8a9a9a;
+  --color-menu-cool-gray: #7f8d8d;
+  --color-menu-creamy-gray: #8a9a9a;
   --color-menu-icon-cool-gray: #4c5b5b;
   --color-menu-green-light: #9fa28f;
   --color-menu-icon-green-light: #676a5a;
@@ -45,6 +46,31 @@ app-root {
   height: 100vh;
   min-height: 465px;
   gap: 5vw;
-  padding-right: 10vw;
+}
+
+app-root>div {
+  width: 100%;
   background-color: var(--color-menu-cool-gray);
+}
+
+app-root>div.home{
+  background-color: var(--color-menu-cool-gray);
+}
+
+app-root>div.notes{
+  background-color: var(--color-menu-soft-sky-blue);
+}
+
+app-root>div.checklists{
+  background-color: var(--color-menu-creamy-peach);
+}
+
+app-root>div.events{
+  background-color: var(--color-menu-green-light);
+}
+
+app-root>div.about, 
+app-root>div.contacts, 
+app-root>div.news{
+  background-color: var(--color-menu-creamy-gray);
 }

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
+import { BackgroundColorService } from './background-color.service';
 
 @Component({
   selector: 'app-nav',
@@ -13,7 +14,7 @@ export class NavComponent {
 
   constructor(private authService: AuthService) {
   }
-  
+
   ngOnChanges() {
     this.user = this.authService.user;
   }
@@ -25,5 +26,4 @@ export class NavComponent {
   //     username: 'Bill'
   //   }
   // }
-
 }

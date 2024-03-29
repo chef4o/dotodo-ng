@@ -1,13 +1,14 @@
 <div class="sidebar">
     <div class="navigation">
-        <a routerLink="/" id="logo"><img src="assets/images/logo_dark.png" alt="DOTODO" /></a>
+        <a routerLink="/" id="logo" (click)="backgroundService.setBackground('home')">
+            <img src="assets/images/logo_dark.png" alt="DOTODO" />
+        </a>
 
         <ul class="menu">
             <ng-container *ngFor="let element of sidebarNavElements">
-                <a routerLink="{{element.href}}">
+                <a routerLink="{{element.href}}" (click)="backgroundService.setBackground(element.name)">
                     <li *ngIf="element.name !== 'profile' || user"
-                        [class.active]="selectedPageBg === element.name" [class]="element.name">
-
+                        [class.active]="backgroundService.selectedPageBg === element.name" [class]="element.name">
                         <i class="{{element.icon}}"></i>
                         {{element.name}}
                     </li>

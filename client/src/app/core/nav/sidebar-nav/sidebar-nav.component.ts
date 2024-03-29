@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
+import { BackgroundColorService } from '../background-color.service';
 const sidebarNav = require('./sidebar-nav-elements.json');
 
 @Component({
@@ -13,13 +15,10 @@ export class SidebarNavComponent {
 
   @Input() user!: IAuthUser | null;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, public backgroundService: BackgroundColorService) {
   }
 
   ngOnChanges() {
     this.user = this.authService.user;
   }
-  
-  //change background according to the logic
-  selectedPageBg = "home";
 }

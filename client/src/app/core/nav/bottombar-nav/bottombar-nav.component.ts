@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { BackgroundColorService } from '../background-color.service';
 const bottomNav = require('./bottom-nav-elements.json') 
 
 @Component({
@@ -9,5 +10,8 @@ const bottomNav = require('./bottom-nav-elements.json')
 export class BottombarNavComponent {
 
   bottomNavElements = bottomNav;
+
+  constructor(public backgroundService: BackgroundColorService) {
+  }
 
 }

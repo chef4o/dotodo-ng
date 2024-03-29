@@ -1,5 +1,7 @@
 <ul class="bottom-bar">
-    <li *ngFor="let item of bottomNavElements">
-        <a routerLink={{item.href}}>{{item.name}}</a>
-    </li>
+    <ng-container *ngFor="let item of bottomNavElements">
+        <li (click)="backgroundService.setBackground(item.name)">
+            <a routerLink={{item.href}}>{{item.name}}</a>
+        </li>
+    </ng-container>
 </ul>

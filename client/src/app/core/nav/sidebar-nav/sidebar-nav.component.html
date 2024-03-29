@@ -5,7 +5,7 @@
         <ul class="menu">
             <ng-container *ngFor="let element of sidebarNavElements">
                 <a routerLink="{{element.href}}">
-                    <li *ngIf="element.name !== 'profile' || loggedUser"
+                    <li *ngIf="element.name !== 'profile' || user"
                         [class.active]="selectedPageBg === element.name" [class]="element.name">
 
                         <i class="{{element.icon}}"></i>

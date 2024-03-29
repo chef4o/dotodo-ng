@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 
 @Component({
   selector: 'app-topbar-nav',
@@ -8,8 +9,6 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class TopbarNavComponent {
 
-  user: any;
-
   constructor(private authService: AuthService) {
   }
 
@@ -17,6 +16,7 @@ export class TopbarNavComponent {
     this.user = this.authService.user;
   }
 
+  @Input() user!: IAuthUser | null;
   @Input() showLoginModal!: () => void;
   @Input() showRegisterModal!: () => void;
 

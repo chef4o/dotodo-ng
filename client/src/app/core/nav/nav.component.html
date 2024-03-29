@@ -1,9 +1,9 @@
 <div class="nav">
     <app-auth #authComponent></app-auth>
-    <app-topbar-nav 
+    <app-topbar-nav [user]="user"
         [showLoginModal]="authComponent.showLoginModal.bind(authComponent)"
         [showRegisterModal]="authComponent.showRegisterModal.bind(authComponent)">
     </app-topbar-nav>
-    <app-sidebar-nav></app-sidebar-nav>
+    <app-sidebar-nav [user]="user"></app-sidebar-nav>
     <app-bottombar-nav></app-bottombar-nav>
 </div>

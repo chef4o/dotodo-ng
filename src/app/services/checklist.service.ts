@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { IChecklist } from '../interfaces/checklist';
+import { IChecklist } from '../shared/interfaces/checklist';
 
 const baseUrl = environment.apiUrl + '/users';
 

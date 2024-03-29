@@ -7,6 +7,7 @@ import { HomeComponent } from "src/app/main/home/home.component";
 import { NewsComponent } from "src/app/main/news/news.component";
 import { NotesComponent } from "src/app/main/notes/notes.component";
 import { ProfileComponent } from "src/app/main/profile/profile.component";
+import { AuthAccess } from "src/app/shared/guards/auth.access";
 
 const routes: Routes = [
     {
@@ -14,7 +15,6 @@ const routes: Routes = [
         component: AboutUsComponent,
         data: {
             title: 'About DOTODO',
-            loginRequired: false
         }
     },
     {
@@ -22,7 +22,6 @@ const routes: Routes = [
         component: NewsComponent,
         data: {
             title: 'DOTODO News',
-            loginRequired: false
         }
     },
     {
@@ -30,7 +29,6 @@ const routes: Routes = [
         component: ContactsComponent,
         data: {
             title: 'DOTODO Contacts',
-            loginRequired: false
         }
     },
     {
@@ -38,11 +36,11 @@ const routes: Routes = [
         component: HomeComponent,
         data: {
             title: 'DOTODO Task Manager',
-            loginRequired: false
         }
     },
     {
         path: 'events',
+        canActivate: [AuthAccess],
         component: EventsComponent,
         data: {
             title: 'DOTODO Events',
@@ -51,6 +49,7 @@ const routes: Routes = [
     },
     {
         path: 'notes',
+        canActivate: [AuthAccess],
         component: NotesComponent,
         data: {
             title: 'DOTODO Notes',
@@ -59,6 +58,7 @@ const routes: Routes = [
     },
     {
         path: 'checklists',
+        canActivate: [AuthAccess],
         component: ChecklistComponent,
         data: {
             title: 'DOTODO Checklists',
@@ -67,6 +67,7 @@ const routes: Routes = [
     },
     {
         path: 'profile',
+        canActivate: [AuthAccess],
         component: ProfileComponent,
         data: {
             title: 'My DOTODO',

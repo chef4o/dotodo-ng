@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErrorPageComponent } from './main/error-page/error-page.component';
+import { Err404Component } from './main/error-pages/err404/err404.component';
+import { Err403Component } from './main/error-pages/err403/err403.component';
 
 const routes: Routes = [
   {
@@ -9,12 +10,16 @@ const routes: Routes = [
     redirectTo: '/home',
   },
   {
-    path: 'not-found',
-    component: ErrorPageComponent,
+    path: '404-not-found',
+    component: Err404Component,
+  },
+  {
+    path: '403-forbidden',
+    component: Err403Component,
   },
   {
     path: '**',
-    redirectTo: '/not-found',
+    redirectTo: '/404-not-found',
   },
 ];
 

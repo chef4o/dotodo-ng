@@ -8,11 +8,13 @@ import { SharedComponent } from './shared/shared.component';
 import { SharedModule } from './shared/shared.module';
 import { MainModule } from './main/main.module';
 import { AuthModule } from './core/auth/auth.module';
+import { ErrorPagesModule } from './main/error-pages/error-pages.module';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent],
   imports: [
     AuthModule,
+    ErrorPagesModule,
     CoreModule,
     SharedModule,
     MainModule,

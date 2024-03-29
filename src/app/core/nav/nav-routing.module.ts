@@ -12,42 +12,66 @@ const routes: Routes = [
     {
         path: 'about-us',
         component: AboutUsComponent,
-        data: { title: 'About DOTODO' }
+        data: {
+            title: 'About DOTODO',
+            loginRequired: false
+        }
     },
     {
         path: 'news',
         component: NewsComponent,
-        data: { title: 'DOTODO News' }
+        data: {
+            title: 'DOTODO News',
+            loginRequired: false
+        }
     },
     {
         path: 'contacts',
         component: ContactsComponent,
-        data: { title: 'DOTODO Contacts' }
+        data: {
+            title: 'DOTODO Contacts',
+            loginRequired: false
+        }
     },
     {
         path: 'home',
         component: HomeComponent,
-        data: { title: 'DOTODO Task Manager' }
+        data: {
+            title: 'DOTODO Task Manager',
+            loginRequired: false
+        }
     },
     {
         path: 'events',
         component: EventsComponent,
-        data: { title: 'DOTODO Events' }
+        data: {
+            title: 'DOTODO Events',
+            loginRequired: true
+        }
     },
     {
         path: 'notes',
         component: NotesComponent,
-        data: { title: 'DOTODO Notes' }
+        data: {
+            title: 'DOTODO Notes',
+            loginRequired: true
+        }
     },
     {
         path: 'checklists',
         component: ChecklistComponent,
-        data: { title: 'DOTODO Checklists' }
+        data: {
+            title: 'DOTODO Checklists',
+            loginRequired: true
+        }
     },
     {
         path: 'profile',
         component: ProfileComponent,
-        data: { title: 'My DOTODO' }
+        data: {
+            title: 'My DOTODO',
+            loginRequired: true
+        }
     }
 ];
 

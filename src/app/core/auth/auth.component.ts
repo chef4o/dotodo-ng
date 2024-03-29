@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { GlobalLoaderService } from 'src/app/services/global-loader.service';
 
@@ -16,12 +15,10 @@ export class AuthComponent {
   constructor(
     private authService: AuthService,
     private loaderService: GlobalLoaderService,
-    private router: Router,
   ) {
   }
 
   showLoginModal(): void {
-    this.router.navigateByUrl('auth/login');
     this.loaderService.showLoader('login');
 
     this.showLoginScreen = true;
@@ -30,7 +27,6 @@ export class AuthComponent {
   }
 
   showRegisterModal(): void {
-    this.router.navigateByUrl('auth/register');
     this.loaderService.showLoader('register');
 
     this.showRegisterScreen = true;

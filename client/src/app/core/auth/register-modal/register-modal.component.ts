@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { emailValidator } from '../../../shared/validators/email-validator';
 
 @Component({
   selector: 'app-register-modal',

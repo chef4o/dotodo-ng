@@ -8,7 +8,7 @@
                 <label htmlFor="email">Email</label>
                 <div class="form-input">
                     <i class="fa-solid fa-envelope"></i>
-                    <input ngModel id="email" name="email" type="text" #emailInput="ngModel" email required/>
+                    <input ngModel id="email" name="email" type="text" #emailInput="ngModel" required validateEmail/>
 
                     <!-- more value props: 
                              onChange={changeHandler} 
@@ -20,7 +20,6 @@
                     <div *ngIf="emailInput.errors?.['required']" class="error auth">Email is required</div>
                     <div *ngIf="emailInput.errors?.['email']" class="error auth">Email is invalid</div>
                 </ng-container>
-
             </div>
 
             <div class="username">

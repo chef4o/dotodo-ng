@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthModalService } from 'src/app/services/auth-modal.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 import { BackgroundColorService } from '../background-color.service';
+import { AuthService } from 'src/app/services/auth.service';
 const sidebarNav = require('./sidebar-nav-elements.json');
 
 @Component({

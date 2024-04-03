@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthModalService } from 'src/app/services/auth-modal.service';
 
 @Component({
   selector: 'app-auth',
@@ -12,7 +12,7 @@ export class AuthComponent {
   @Input() showRegisterScreen!: boolean;
   @Input() isLoading!: boolean;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthModalService) {}
 
   hideAuthModalHandler(): void {
     this.authService.hideAuthModal();

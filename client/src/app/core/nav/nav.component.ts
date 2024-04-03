@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthModalService } from 'src/app/services/auth-modal.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 
@@ -11,7 +12,7 @@ export class NavComponent implements OnInit {
 
   @Input() user: IAuthUser | null = null; 
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private authModalService: AuthModalService) {}
 
   ngOnInit(): void {
     this.authService.user$.subscribe(user => {
@@ -19,7 +20,7 @@ export class NavComponent implements OnInit {
     });
   }
 
-  getAuthService(): AuthService {
-    return this.authService;
+  getAuthService(): AuthModalService {
+    return this.authModalService;
   }
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthModalService } from 'src/app/services/auth-modal.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 
@@ -10,7 +11,7 @@ import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 export class TopbarNavComponent implements OnInit {
   @Input() user!: IAuthUser | null;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private authModalService: AuthModalService) {}
 
   ngOnInit(): void {
     this.authService.user$.subscribe(user => {
@@ -19,10 +20,10 @@ export class TopbarNavComponent implements OnInit {
   }
 
   showLoginModal(): void {
-    this.authService.showLoginModal();
+    this.authModalService.showLoginModal();
   }
 
   showRegisterModal(): void { 
-    this.authService.showRegisterModal();
+    this.authModalService.showRegisterModal();
   }
 }

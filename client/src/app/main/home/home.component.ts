@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AuthModalService } from 'src/app/services/auth-modal.service';
+import { AuthModalService } from 'src/app/controllers/auth-modal.service';
 const taskTypes = require('./taskTypes.json');
 
 @Component({

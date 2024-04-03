@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AuthModalService } from 'src/app/services/auth-modal.service';
+import { AuthModalService } from 'src/app/controllers/auth-modal.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 

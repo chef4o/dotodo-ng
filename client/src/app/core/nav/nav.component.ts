@@ -1,29 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
-import { BackgroundColorService } from './background-color.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
 
-  user: IAuthUser | null = null;
+  @Input() user: IAuthUser | null = null; 
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.user$.subscribe(user => {
+      this.user = user;
+    });
   }
 
-  ngOnChanges() {
-    this.user = this.authService.user;
+  getAuthService(): AuthService {
+    return this.authService;
   }
-
-  // ngOnInit(): void {
-  //   this.user = {
-  //     _id: '123',
-  //     firstName: '',
-  //     username: 'Bill'
-  //   }
-  // }
 }

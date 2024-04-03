@@ -1,29 +1,37 @@
-<form method="post" class="auth-form BCK_PROP login" action="auth/login">
-    <button class="xmark" (click)="hideAuthModal()"><i class="fa-solid fa-xmark"></i></button>
+<form #loginForm="ngForm" class="auth-form BCK_PROP login" (ngSubmit)="handleLoginFormSubmit(loginForm)">
+    <button class="xmark" (click)="hideModal()"><i class="fa-solid fa-xmark"></i></button>
 
     <div class="auth-fields">
         <div class="username">
-            <label htmlFor="username">Username/Email</label>
+            <label for="username">Username/Email</label>
             <div class="form-input">
                 <i class="fa-solid fa-user"></i>
-                <input ref="{usernameInputRef}" id="username" name="username" type="text" value="username"
-                    onChange="{changeHandler}" class="validationErrors.username && error-field" />
+                <input ngModel id="username" name="username" type="text" autocomplete="off" #usernameInput="ngModel"
+                    required />
             </div>
-            <!-- {validationErrors.username && <div class={`error auth $username`}>{validationErrors.username}</div>} -->
+
+            <ng-container *ngIf="usernameInput.touched">
+                <div *ngIf="usernameInput.errors?.['required']" class="error auth username">
+                    Username or email is required
+                </div>
+            </ng-container>
         </div>
 
         <div class="password">
-            <label htmlFor="password">Password</label>
+            <label for="password">Password</label>
             <div class="form-input">
                 <i class="fa-solid fa-key"></i>
-                <input id="password" name="password" type="password" value={formValues.password}
-                    onChange={changeHandler} class="validationErrors.password && error-field" />
+                <input ngModel id="password" name="password" type="password" autocomplete="off" #passwordInput="ngModel"
+                    required />
             </div>
-            <!-- {validationErrors.password && <div class={`error auth $"password"`}>{validationErrors.password}</div>} -->
+
+            <ng-container *ngIf="passwordInput.touched">
+                <div *ngIf="passwordInput.errors?.['required']" class="error auth password">Password is required</div>
+            </ng-container>
         </div>
     </div>
 
     <!-- {validationErrors.login && <div class="error auth login">{validationErrors.login}</div>} -->
 
-    <button type="button" class="login">Login</button>
+    <button class="login">Login</button>
 </form>

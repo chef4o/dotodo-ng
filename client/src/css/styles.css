@@ -1,5 +1,6 @@
 @import url("./reset.css");
 @import url("./typography.css");
+@import url("./error.css");
 
 :root {
   --color-gray-light: rgba(250, 250, 250, 0.6);

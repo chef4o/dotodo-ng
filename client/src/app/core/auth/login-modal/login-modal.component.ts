@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login-modal',
@@ -6,7 +7,19 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./login-modal.component.css'],
 })
 export class LoginModalComponent {
-  @Input() isLoading!: boolean;
-  @Input() hideAuthModal!: () => void;  
-  @Input() showLoginModal!: () => void;
+  @Output() hideAuthModalHandler: EventEmitter<void> = new EventEmitter<void>();
+
+  handleLoginFormSubmit(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+
+    const value: { username: string; password: string } = form.value;
+    form.setValue({ username: '', password: '' });
+    console.log(value);
+  }
+
+  hideModal() {
+    this.hideAuthModalHandler.emit();
+  }
 }

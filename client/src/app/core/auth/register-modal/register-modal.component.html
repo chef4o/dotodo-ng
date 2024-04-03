@@ -1,5 +1,6 @@
-<form method="post" class="auth-form BCK_IMAGE_COLOR register" action="auth/register">
-    <button class="xmark" (click)="hideAuthModal()"><i class="fa-solid fa-xmark"></i></button>
+<form #registerForm="ngForm" class="auth-form BCK_IMAGE_COLOR register"
+    (ngSubmit)="handleRegisterFormSubmit(registerForm)">
+    <button class="xmark" (click)="hideModal()"><i class="fa-solid fa-xmark"></i></button>
 
     <div class="auth-fields">
         <div class="user-container">
@@ -7,31 +8,35 @@
                 <label htmlFor="email">Email</label>
                 <div class="form-input">
                     <i class="fa-solid fa-envelope"></i>
-                    <input ref={emailInputRef} id="email" name="email" type="text"
-                        value={formValues.email} />
+                    <input ngModel id="email" name="email" type="text" #emailInput="ngModel" email required/>
 
                     <!-- more value props: 
                              onChange={changeHandler} 
                         onBlur={()=> focusHandler(FORM_FIELDS.email)}
-                    class={validationErrors.email && "error-field"} /> -->
+                    class={validationErrors.email && "error-field"}-->
                 </div>
 
-                <!-- <div class={`error auth`}>{validationErrors.email}</div> -->
+                <ng-container *ngIf="emailInput.touched">
+                    <div *ngIf="emailInput.errors?.['required']" class="error auth">Email is required</div>
+                    <div *ngIf="emailInput.errors?.['email']" class="error auth">Email is invalid</div>
+                </ng-container>
+
             </div>
 
             <div class="username">
                 <label htmlFor="username">Username</label>
                 <div class="form-input">
                     <i class="fa-solid fa-user"></i>
-                    <input id="username" name="username" type="text"
-                        value={formValues.username} />
+                    <input ngModel id="username" name="username" type="text" #usernameInput="ngModel" required/>
                     <!-- more value props: 
                              onChange={changeHandler} 
                         onBlur={()=> focusHandler(FORM_FIELDS.username)}
                     class={validationErrors.username && "error-field"} /> -->
                 </div>
 
-                <!-- <div class={`error auth`}>{validationErrors.username}</div> -->
+                <ng-container *ngIf="usernameInput.touched">
+                    <div *ngIf="usernameInput.errors?.['required']" class="error auth">Username is required</div>
+                </ng-container>
             </div>
         </div>
 
@@ -40,23 +45,23 @@
                 <label htmlFor="password">Password</label>
                 <div class="form-input">
                     <i class="fa-solid fa-key"></i>
-                    <input id="password" name="password" type="password"
-                        value="password" />
+                    <input id="password" name="password" type="password" #passwordInput="ngModel" ngModel required/>
                     <!-- more value props: 
                              onChange={changeHandler} 
                         onBlur="focusHandler(FORM_FIELDS.password)
                     class={validationErrors.password && "error-field"} -->
                 </div>
 
-                <!-- <div class={`error auth`}>{validationErrors.password}</div> -->
+                <ng-container *ngIf="passwordInput.touched">
+                    <div *ngIf="passwordInput.errors?.['required']" class="error auth">Password is required</div>
+                </ng-container>
             </div>
 
             <div class="repass">
                 <label htmlFor="repass">Repeat password</label>
                 <div class="form-input">
                     <i class="fa-solid fa-key"></i>
-                    <input id="repass" name="repass" type="password"
-                        value="repass" />
+                    <input id="repass" name="repass" type="password" #repassInput="ngModel" ngModel required/>
                     <!-- more value props: 
                              onChange={changeHandler} 
                         onBlur={()=>
@@ -64,10 +69,12 @@
                     class={validationErrors.repass && "error-field"} /> -->
                 </div>
 
-                <!-- <div class={`error auth`}>{validationErrors.repass}</div> -->
+                <ng-container *ngIf="repassInput.touched">
+                    <div *ngIf="repassInput.errors?.['required']" class="error auth">Field is required</div>
+                </ng-container>
             </div>
         </div>
     </div>
 
-    <button type="button" class="register" onClick={submitFormHandler}>Register</button>
+    <button class="register">Register</button>
 </form>

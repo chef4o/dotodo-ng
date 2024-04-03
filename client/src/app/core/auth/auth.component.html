@@ -1,12 +1,16 @@
 <ng-container *ngIf="showLoginScreen || showRegisterScreen">
-    <div class="backdrop" (click)="hideAuthModal()"></div>
+    <div class="backdrop" (click)="hideAuthModalHandler()"></div>
 </ng-container>
 
-<app-login-modal
-    *ngIf="showLoginScreen" [hideAuthModal]="hideAuthModal"></app-login-modal>
-<app-register-modal
-    *ngIf="showRegisterScreen"></app-register-modal>
-    
+<app-login-modal *ngIf="showLoginScreen" 
+    (hideAuthModalHandler)="hideAuthModalHandler()">
+</app-login-modal>
+
+<app-register-modal *ngIf="showRegisterScreen" 
+    (hideAuthModalHandler)="hideAuthModalHandler()">
+</app-register-modal>
+
 <div class="loading" *ngIf="isLoading">
+
     <app-loading-spinner></app-loading-spinner>
 </div>

@@ -13,12 +13,14 @@ const sidebarNav = require('./sidebar-nav-elements.json');
 export class SidebarNavComponent {
   sidebarNavElements = sidebarNav;
 
-  @Input() user!: IAuthUser | null;
+  @Input() user: IAuthUser | null = null;
 
   constructor(private authService: AuthService, public backgroundService: BackgroundColorService) {
   }
 
-  ngOnChanges() {
-    this.user = this.authService.user;
+  ngOnInit(): void {
+    this.authService.user$.subscribe(user => {
+      this.user = user;
+    });
   }
 }

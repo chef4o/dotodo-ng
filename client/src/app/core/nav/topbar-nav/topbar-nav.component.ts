@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { IAuthUser } from 'src/app/shared/interfaces/authUser';
 
@@ -7,17 +7,22 @@ import { IAuthUser } from 'src/app/shared/interfaces/authUser';
   templateUrl: './topbar-nav.component.html',
   styleUrls: ['./topbar-nav.component.css'],
 })
-export class TopbarNavComponent {
-
-  constructor(private authService: AuthService) {
-  }
-
-  ngOnChanges() {
-    this.user = this.authService.user;
-  }
-
+export class TopbarNavComponent implements OnInit {
   @Input() user!: IAuthUser | null;
-  @Input() showLoginModal!: () => void;
-  @Input() showRegisterModal!: () => void;
 
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.user$.subscribe(user => {
+      this.user = user;
+    });
+  }
+
+  showLoginModal(): void {
+    this.authService.showLoginModal();
+  }
+
+  showRegisterModal(): void { 
+    this.authService.showRegisterModal();
+  }
 }

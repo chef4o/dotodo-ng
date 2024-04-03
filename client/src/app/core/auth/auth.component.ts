@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { GlobalLoaderService } from 'src/app/services/global-loader.service';
 
 @Component({
   selector: 'app-auth',
@@ -8,35 +7,14 @@ import { GlobalLoaderService } from 'src/app/services/global-loader.service';
   styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent {
-  showLoginScreen = false;
-  showRegisterScreen = false;
-  isLoading = false;
 
-  constructor(
-    private authService: AuthService,
-    private loaderService: GlobalLoaderService,
-  ) {
-  }
+  @Input() showLoginScreen!: boolean;
+  @Input() showRegisterScreen!: boolean;
+  @Input() isLoading!: boolean;
 
-  showLoginModal(): void {
-    this.loaderService.showLoader('login');
+  constructor(private authService: AuthService) {}
 
-    this.showLoginScreen = true;
-    this.showRegisterScreen = false;
-    this.isLoading = true;
-  }
-
-  showRegisterModal(): void {
-    this.loaderService.showLoader('register');
-
-    this.showRegisterScreen = true;
-    this.showLoginScreen = false;
-    this.isLoading = true;
-  }
-
-  hideAuthModal(): void {
-    this.showLoginScreen = false;
-    this.showRegisterScreen = false;
-    this.isLoading = false;
+  hideAuthModalHandler(): void {
+    this.authService.hideAuthModal();
   }
 }

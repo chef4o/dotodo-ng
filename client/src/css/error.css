@@ -3,6 +3,9 @@
     font-size: 1vw;
     padding-top: 0.1vw;
     height: 1vw;
+    position: absolute;
+    bottom: 1vw;
+    font-weight: 500;
 }
 
 .error.contact {

@@ -50,14 +50,11 @@
 ::ng-deep .auth-form .email,
 ::ng-deep .auth-form .password,
 ::ng-deep .auth-form .repass {
+    position: relative;
     display: flex;
     flex-direction: column;
     font-size: 1vw;
-}
-
-::ng-deep .auth-form .user-container,
-::ng-deep .auth-form .password-container {
-    gap: 1vw;
+    padding-bottom: 2vw;
 }
 
 ::ng-deep .auth-form .form-input {

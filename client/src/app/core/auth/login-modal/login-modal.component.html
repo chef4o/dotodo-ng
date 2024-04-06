@@ -33,5 +33,5 @@
 
     <!-- {validationErrors.login && <div class="error auth login">{validationErrors.login}</div>} -->
 
-    <button class="login">Login</button>
+    <button [disabled]="loginForm.invalid" class="login">Login</button>
 </form>

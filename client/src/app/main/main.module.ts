@@ -8,12 +8,17 @@ import { HomeModule } from './home/home.module';
 import { EventsModule } from './events/events.module';
 import { NotesModule } from './notes/notes.module';
 import { ProfileModule } from './profile/profile.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent, 
+    ContactsComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     HomeModule,
     EventsModule,
     NotesModule,

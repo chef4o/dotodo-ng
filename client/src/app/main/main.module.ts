@@ -10,11 +10,15 @@ import { NotesModule } from './notes/notes.module';
 import { ProfileModule } from './profile/profile.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactsComponent } from './contacts/contacts.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
     MainComponent, 
-    ContactsComponent
+    ContactsComponent,
+    AboutUsComponent, 
+    NewsComponent
   ],
   imports: [
     FormsModule,

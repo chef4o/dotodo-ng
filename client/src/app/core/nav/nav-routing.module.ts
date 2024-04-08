@@ -40,7 +40,7 @@ const routes: Routes = [
     },
     {
         path: 'events',
-        canActivate: [AuthAccess],
+        // canActivate: [AuthAccess],
         component: EventsComponent,
         data: {
             title: 'DOTODO Events',

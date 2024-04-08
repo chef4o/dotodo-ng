@@ -11,7 +11,7 @@
             </div>
 
             <ng-container *ngIf="usernameInput.touched">
-                <div *ngIf="usernameInput.errors?.['required']" class="error auth username">
+                <div *ngIf="usernameInput.errors?.['required']" class="error auth login username">
                     Username or email is required
                 </div>
             </ng-container>
@@ -26,7 +26,7 @@
             </div>
 
             <ng-container *ngIf="passwordInput.touched">
-                <div *ngIf="passwordInput.errors?.['required']" class="error auth password">Password is required</div>
+                <div *ngIf="passwordInput.errors?.['required']" class="error auth login password">Password is required</div>
             </ng-container>
         </div>
     </div>

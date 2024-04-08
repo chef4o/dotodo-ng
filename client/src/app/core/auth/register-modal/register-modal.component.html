@@ -17,8 +17,8 @@
                 </div>
 
                 <ng-container *ngIf="emailInput.touched">
-                    <div *ngIf="emailInput.errors?.['required']" class="error auth">Email is required</div>
-                    <div *ngIf="emailInput.errors?.['email']" class="error auth">Email is invalid</div>
+                    <div *ngIf="emailInput.errors?.['required']" class="error auth register">Email is required</div>
+                    <div *ngIf="emailInput.errors?.['email']" class="error auth register">Email is invalid</div>
                 </ng-container>
             </div>
 
@@ -35,8 +35,8 @@
                 </div>
 
                 <ng-container *ngIf="usernameInput.touched">
-                    <div *ngIf="usernameInput.errors?.['required']" class="error auth">Username is required</div>
-                    <div *ngIf="usernameInput.errors?.['minlength']" class="error auth">Username must be at leats 5
+                    <div *ngIf="usernameInput.errors?.['required']" class="error auth register">Username is required</div>
+                    <div *ngIf="usernameInput.errors?.['minlength']" class="error auth register">Username must be at leats 5
                         characters long</div>
                 </ng-container>
             </div>
@@ -56,8 +56,8 @@
                 </div>
 
                 <ng-container *ngIf="passwordInput.touched">
-                    <div *ngIf="passwordInput.errors?.['required']" class="error auth">Password is required</div>
-                    <div *ngIf="passwordInput.errors?.['minlength']" class="error auth">Password must be at leats 6
+                    <div *ngIf="passwordInput.errors?.['required']" class="error auth register">Password is required</div>
+                    <div *ngIf="passwordInput.errors?.['minlength']" class="error auth register">Password must be at leats 6
                         characters long</div>
                 </ng-container>
             </div>

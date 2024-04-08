@@ -1,0 +1,24 @@
+.content.notes .note.new {
+    background-color: var(--color-checklist-new-bckgd);
+}
+
+.content.notes .note.new input {
+    width: 8vw;
+    border: none;
+}
+
+.content.notes .note.new input.title {
+    background: none;
+    padding-bottom: 0.6vw;
+    border-bottom: 1px solid var(--color-notes-border);
+}
+
+.content.notes .note.new input.note-text {
+    margin-top: 1vw;
+}
+
+.content.notes .note.new button {
+    position: absolute;
+    bottom: -11vw;
+    right: 0.6vw;
+}

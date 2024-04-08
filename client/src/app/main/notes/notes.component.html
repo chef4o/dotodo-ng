@@ -1,1 +1,18 @@
-<p>notes works!</p>
+<div class="content notes">
+    <ul *ngIf="notes.length > 0" class="notes-list">
+        <ng-container *ngFor="let note of notes">
+            <app-note-item></app-note-item> <!-- to add note as context -->
+            <app-empty-note></app-empty-note>
+        </ng-container>
+    </ul>
+
+    <div *ngIf="notes.length === 0" class="new-note">
+        <app-err204></app-err204>
+
+        <button *ngIf="!makeNew" class="add-note">Add</button>
+        <div *ngIf="makeNew" class="new-note">
+            <input value={text} placeholder="Note title" />
+            <button class="add-note">Add</button>
+        </div>
+    </div>
+</div>

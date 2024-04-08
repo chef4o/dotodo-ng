@@ -40,7 +40,7 @@ const routes: Routes = [
     },
     {
         path: 'events',
-        // canActivate: [AuthAccess],
+        canActivate: [AuthAccess],
         component: EventsComponent,
         data: {
             title: 'DOTODO Events',
@@ -49,7 +49,7 @@ const routes: Routes = [
     },
     {
         path: 'notes',
-        canActivate: [AuthAccess],
+        // canActivate: [AuthAccess],
         component: NotesComponent,
         data: {
             title: 'DOTODO Notes',
@@ -58,7 +58,7 @@ const routes: Routes = [
     },
     {
         path: 'checklists',
-        canActivate: [AuthAccess],
+        // canActivate: [AuthAccess],
         component: ChecklistComponent,
         data: {
             title: 'DOTODO Checklists',

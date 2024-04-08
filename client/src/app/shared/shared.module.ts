@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ErrorValidationComponent } from './error-validation/error-validation.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import { EmailValidatorDirective } from './validators/email-validation.directive';
+import { ErrorHandlingModule } from './error-handling/error-handling.module';
 
 @NgModule({
-  declarations: [ErrorValidationComponent, LoadingSpinnerComponent, EmailValidatorDirective],
-  imports: [CommonModule],
-  exports: [ErrorValidationComponent, LoadingSpinnerComponent, EmailValidatorDirective]
+  declarations: [LoadingSpinnerComponent],
+  imports: [CommonModule, ErrorHandlingModule],
+  exports: [LoadingSpinnerComponent]
 })
 export class SharedModule {}

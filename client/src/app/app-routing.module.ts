@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Err404Component } from './main/error-pages/err404/err404.component';
-import { Err403Component } from './main/error-pages/err403/err403.component';
+import { Err404Component } from './shared/error-handling/error-pages/err404/err404.component';
+import { Err403Component } from './shared/error-handling/error-pages/err403/err403.component';
 
 const routes: Routes = [
   {

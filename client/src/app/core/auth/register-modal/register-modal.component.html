@@ -35,8 +35,10 @@
                 </div>
 
                 <ng-container *ngIf="usernameInput.touched">
-                    <div *ngIf="usernameInput.errors?.['required']" class="error auth register">Username is required</div>
-                    <div *ngIf="usernameInput.errors?.['minlength']" class="error auth register">Username must be at leats 5
+                    <div *ngIf="usernameInput.errors?.['required']" class="error auth register">Username is required
+                    </div>
+                    <div *ngIf="usernameInput.errors?.['minlength']" class="error auth register">Username must be at
+                        leats 5
                         characters long</div>
                 </ng-container>
             </div>
@@ -54,10 +56,12 @@
                         onBlur="focusHandler(FORM_FIELDS.password)
                     class={validationErrors.password && "error-field"} -->
                 </div>
-                
+
                 <ng-container *ngIf="passwordInput.touched">
-                    <div *ngIf="passwordInput.errors?.['required']" class="error auth register">Password is required</div>
-                    <div *ngIf="passwordInput.errors?.['minlength']" class="error auth register">Password must be at leats 6
+                    <div *ngIf="passwordInput.errors?.['required']" class="error auth register">Password is required
+                    </div>
+                    <div *ngIf="passwordInput.errors?.['minlength']" class="error auth register">Password must be at
+                        leats 6
                         characters long</div>
                 </ng-container>
             </div>
@@ -76,7 +80,9 @@
 
                 <ng-container *ngIf="repassInput.touched">
                     <div *ngIf="repassInput.errors?.['required']" class="error auth">Field is required</div>
-                    <div *ngIf="!repassInput.errors?.['required'] && repassInput.value.length >= 6 && repassInput.value != passwordInput.value" class="error auth">Passwords must match</div>
+                    <div *ngIf="!repassInput.errors?.['required'] 
+                        && repassInput.value.length >= 6 && repassInput.value != passwordInput.value"
+                        class="error auth">Passwords must match</div>
                 </ng-container>
             </div>
         </div>

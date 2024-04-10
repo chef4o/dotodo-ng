@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+const newsSource = require ('./news.json');
 
 @Component({
   selector: 'app-news',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent {
-
+  news = newsSource;
 }

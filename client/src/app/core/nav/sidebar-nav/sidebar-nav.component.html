@@ -10,7 +10,7 @@
                     <li *ngIf="element.name !== 'profile' || user"
                         [class.active]="backgroundService.selectedPageBg === element.name" [class]="element.name">
                         <i class="{{element.icon}}"></i>
-                        {{element.name}}
+                        {{element.name | uppercase}} 
                     </li>
                 </a>
             </ng-container>

@@ -1,8 +1,8 @@
-<a routerLink="/{{task.name.toLocaleLowerCase()}}" 
-    (click)="backgroundService.setBackground(task.name.toLocaleLowerCase())">
+<a routerLink="/{{task.name}}" 
+    (click)="backgroundService.setBackground(task.name)">
     
-    <li class="{{task.name.toLocaleLowerCase()}}">
-        <h4>{{task.name}}</h4>
+    <li class="{{task.name}}">
+        <h4>{{task.name | titlecase}}</h4>
         <h3 class="header-text">{{task.headerText}}</h3>
     </li>
 </a>

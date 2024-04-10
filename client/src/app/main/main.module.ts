@@ -13,6 +13,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsComponent } from './news/news.component';
 import { ChecklistsModule } from './checklists/checklists.module';
+import { ShrinkToFitPipe } from '../shared/pipes/shrink-to-fit.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { ChecklistsModule } from './checklists/checklists.module';
     CoreModule,
     CommonModule,
     SharedModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   exports: [MainComponent],
 })

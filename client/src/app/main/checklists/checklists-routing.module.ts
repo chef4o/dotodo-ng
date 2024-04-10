@@ -1,14 +1,15 @@
 import { Routes } from "@angular/router";
-import { ChecklistComponent } from "./checklist/checklist.component";
+import { ChecklistsComponent } from "./checklists.component";
+import { ChklstComponent } from "./chklst/chklst.component";
 
 const routes: Routes = [
     {
         path: 'checklists',
-        component: ChecklistComponent,
+        component: ChecklistsComponent,
         children: [
             {
                 path: ':id',
-                component: ChecklistComponent,
+                component: ChklstComponent,
             }
         ],
     },

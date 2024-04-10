@@ -1,1 +1,22 @@
-<p>checklists works!</p>
+<div class="content checklists">
+    <ul *ngIf="checklists.length > 0" class="checklists-list">
+
+        <ng-container *ngFor="let checklist of checklists">
+            <app-checklist></app-checklist> <!-- to add checklist as context -->
+        </ng-container>
+
+        <app-empty-checklist></app-empty-checklist>
+    </ul>
+
+    <div *ngIf="checklists.length === 0" class="no-items">
+
+        <app-err204></app-err204>
+
+        <button *ngIf="!makeNew" class="add-checklist">Create</button>
+
+        <div *ngIf="makeNew" class="new-checklist">
+            <input class="new-checklist-title" placeholder="Checklist title"/>
+            <button class="add-checklist">Add</button>
+        </div>
+    </div>
+</div>

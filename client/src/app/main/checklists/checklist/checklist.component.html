@@ -1,1 +1,24 @@
-<p>checklist works!</p>
+<div class="checklist"> <!-- if activeChecklistId === checklist._id to set class to "checklist active" -->
+
+    <button *ngIf="activeChecklistId === checklist._id" class="xmark">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button class="delete-checklist">
+        <i class="fa-solid fa-trash-can"></i>
+    </button>
+
+    <input class="title" />
+
+    <div class="new-todo-item">
+        <input class="new-todo-item-text" />
+        <button>
+            <i class="fa-solid fa-square-plus"></i>
+        </button>
+    </div>
+
+    <ng-container *ngFor="let task of checklist.items">
+        <app-checklist-item></app-checklist-item>
+    </ng-container>
+
+</div>

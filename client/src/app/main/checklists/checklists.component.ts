@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ChecklistsComponent {
 
+  checklists = [];
+  checklist = [];
+  makeNew = false;
+
 }

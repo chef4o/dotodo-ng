@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsComponent } from './news/news.component';
+import { ChecklistsModule } from './checklists/checklists.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NewsComponent } from './news/news.component';
     HomeModule,
     EventsModule,
     NotesModule,
+    ChecklistsModule,
     ProfileModule,
     CoreModule,
     CommonModule,

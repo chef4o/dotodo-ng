@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-checklist-item',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./checklist-item.component.css']
 })
 export class ChecklistItemComponent {
+
+  @Input() task!: {taskStatus: string};
 
 }

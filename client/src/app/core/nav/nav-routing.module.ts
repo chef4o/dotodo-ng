@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from "@angular/router";
 import { AboutUsComponent } from "src/app/main/about-us/about-us.component";
-import { ChecklistComponent } from "src/app/main/checklists/checklist/checklist.component";
+import { ChecklistsComponent } from "src/app/main/checklists/checklists.component";
 import { ContactsComponent } from "src/app/main/contacts/contacts.component";
 import { EventsComponent } from "src/app/main/events/events.component";
 import { HomeComponent } from "src/app/main/home/home.component";
@@ -59,7 +59,7 @@ const routes: Routes = [
     {
         path: 'checklists',
         // canActivate: [AuthAccess],
-        component: ChecklistComponent,
+        component: ChecklistsComponent,
         data: {
             title: 'DOTODO Checklists',
             loginRequired: true

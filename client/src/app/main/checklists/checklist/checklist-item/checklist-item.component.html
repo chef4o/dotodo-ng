@@ -1,1 +1,8 @@
-<p>checklist-item works!</p>
+<form method="post" class="todo-item">
+    <input class="tick" type="checkbox" />
+    <input class="{{task.taskStatus==='Done' ? 'done' : '' }}" id="content" name="content" type="text"
+        value={formValues.content} onChange={changeHandler} onBlur={updateValue} />
+    <button class="delete">
+        <i class="fa-solid fa-square-minus"></i>
+    </button>
+</form>

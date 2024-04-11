@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { Err404Component } from './shared/error-handling/error-pages/err404/err404.component';
 import { Err403Component } from './shared/error-handling/error-pages/err403/err403.component';
 
@@ -11,19 +11,25 @@ const routes: Routes = [
   },
   {
     path: 'notes',
-    loadChildren: () => import('./main/notes/notes.module').then(m => m.NotesModule)
+    loadChildren: () =>
+      import('./main/notes/notes.module').then((m) => m.NotesModule),
   },
   {
     path: 'checklists',
-    loadChildren: () => import('./main/checklists/checklists.module').then(m => m.ChecklistsModule)
+    loadChildren: () =>
+      import('./main/checklists/checklists.module').then(
+        (m) => m.ChecklistsModule
+      ),
   },
   {
     path: 'events',
-    loadChildren: () => import('./main/events/events.module').then(m => m.EventsModule)
+    loadChildren: () =>
+      import('./main/events/events.module').then((m) => m.EventsModule),
   },
   {
     path: 'profile',
-    loadChildren: () => import('./main/profile/profile.module').then(m => m.ProfileModule)
+    loadChildren: () =>
+      import('./main/profile/profile.module').then((m) => m.ProfileModule),
   },
   {
     path: '404-not-found',
@@ -40,7 +46,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+  ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

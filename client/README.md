@@ -2,11 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
-To be able to see the 3rd party add-ons (e.g. Bing map in the /about-us page), [allow third-party cookies](https://support.google.com/chrome/answer/95647?hl=en-GB&co=GENIE.Platform%3DDesktop#zippy=%2Callow-third-party-cookies-temporarily-for-a-specific-site) for the specific website or add localhost:4200 to the 'third-party cookies' exceptions from the browser settings. 
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+To be able to see the 3rd party add-ons (e.g. Bing map in the /about-us page), [allow third-party cookies](https://support.google.com/chrome/answer/95647?hl=en-GB&co=GENIE.Platform%3DDesktop#zippy=%2Callow-third-party-cookies-temporarily-for-a-specific-site) for the specific website or add localhost:4200 to the 'third-party cookies' exceptions from the browser settings. 
 
 ## Code scaffolding
 

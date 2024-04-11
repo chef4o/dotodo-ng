@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { MainModule } from './main/main.module';
 import { AuthModule } from './core/auth/auth.module';
 import { ErrorPagesModule } from './shared/error-handling/error-pages/error-pages.module';
+import { MainRoutingModule } from './main/main-routing.module';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent],
@@ -21,6 +22,7 @@ import { ErrorPagesModule } from './shared/error-handling/error-pages/error-page
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    MainRoutingModule
   ],
   bootstrap: [AppComponent],
 })

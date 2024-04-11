@@ -9,33 +9,33 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: '/home',
   },
-  {
-    path: 'notes',
-    loadChildren: () =>
-      import('./main/notes/notes.module').then((m) => m.NotesModule),
-  },
-  {
-    path: 'checklists',
-    loadChildren: () =>
-      import('./main/checklists/checklists.module').then(
-        (m) => m.ChecklistsModule
-      ),
-  },
-  {
-    path: 'events',
-    loadChildren: () =>
-      import('./main/events/events.module').then((m) => m.EventsModule),
-  },
-  {
-    path: 'profile',
-    loadChildren: () =>
-      import('./main/profile/profile.module').then((m) => m.ProfileModule),
-  },
-  {
-    path: 'about-us',
-    loadChildren: () =>
-      import('./main/about-us/about-us.module').then((m) => m.AboutUsModule),
-  },
+  // {
+  //   path: 'notes',
+  //   loadChildren: () =>
+  //     import('./main/notes/notes.module').then((m) => m.NotesModule),
+  // },
+  // {
+  //   path: 'checklists',
+  //   loadChildren: () =>
+  //     import('./main/checklists/checklists.module').then(
+  //       (m) => m.ChecklistsModule
+  //     ),
+  // },
+  // {
+  //   path: 'events',
+  //   loadChildren: () =>
+  //     import('./main/events/events.module').then((m) => m.EventsModule),
+  // },
+  // {
+  //   path: 'profile',
+  //   loadChildren: () =>
+  //     import('./main/profile/profile.module').then((m) => m.ProfileModule),
+  // },
+  // {
+  //   path: 'about-us',
+  //   loadChildren: () =>
+  //     import('./main/about-us/about-us.module').then((m) => m.AboutUsModule),
+  // },
   {
     path: '404-not-found',
     component: Err404Component,

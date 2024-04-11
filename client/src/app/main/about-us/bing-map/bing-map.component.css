@@ -1,4 +1,5 @@
 #bing-map {
+    z-index: 15;
     width: 25.4vw;
     height: 24.4vw;
 }

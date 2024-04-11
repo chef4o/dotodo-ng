@@ -67,7 +67,7 @@ const routes: Routes = [
     },
     {
         path: 'profile',
-        canActivate: [AuthAccess],
+        // canActivate: [AuthAccess],
         component: ProfileComponent,
         data: {
             title: 'My DOTODO',

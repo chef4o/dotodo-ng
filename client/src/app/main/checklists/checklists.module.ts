@@ -5,6 +5,7 @@ import { ErrorPagesModule } from 'src/app/shared/error-handling/error-pages/erro
 import { EmptyChecklistComponent } from './checklist/empty-checklist/empty-checklist.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 import { ChecklistItemComponent } from './checklist/checklist-item/checklist-item.component';
+import { ChecklistsRoutingModule } from './checklists-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { ChecklistItemComponent } from './checklist/checklist-item/checklist-ite
     ChecklistItemComponent,
     ChecklistComponent,
   ],
-  imports: [CommonModule, ErrorPagesModule],
+  imports: [CommonModule, ErrorPagesModule, ChecklistsRoutingModule],
   exports: [ChecklistsComponent],
 })
 export class ChecklistsModule {}

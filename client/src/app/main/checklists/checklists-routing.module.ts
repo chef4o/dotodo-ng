@@ -1,16 +1,12 @@
-import { Routes } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { ChecklistsComponent } from "./checklists.component";
-import { ChklstComponent } from "./chklst/chklst.component";
 
 const routes: Routes = [
     {
-        path: 'checklists',
-        component: ChecklistsComponent,
-        children: [
-            {
-                path: ':id',
-                component: ChklstComponent,
-            }
-        ],
-    },
-];
+        path: '',
+        pathMatch: 'full', 
+        component: ChecklistsComponent
+    }
+]
+
+export const ChecklistsRoutingModule = RouterModule.forChild(routes);

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile.component';
 import { ProfileNotesComponent } from './profile-notes/profile-notes.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { ProfileRoutingModule } from './profile-routing.model';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,7 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
     ProfileDetailsComponent,
     ProfileNotesComponent,
   ],
-  imports: [CommonModule],
-  exports: [ProfileComponent, ProfileDetailsComponent, ProfileNotesComponent],
+  imports: [CommonModule, ProfileRoutingModule],
+  exports: [ProfileComponent],
 })
 export class ProfileModule {}

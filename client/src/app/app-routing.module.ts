@@ -32,6 +32,11 @@ const routes: Routes = [
       import('./main/profile/profile.module').then((m) => m.ProfileModule),
   },
   {
+    path: 'about-us',
+    loadChildren: () =>
+      import('./main/about-us/about-us.module').then((m) => m.AboutUsModule),
+  },
+  {
     path: '404-not-found',
     component: Err404Component,
   },

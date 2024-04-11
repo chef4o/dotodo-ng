@@ -13,6 +13,7 @@ declare global {
   styleUrls: ['./bing-map.component.css'],
 })
 export class BingMapComponent implements OnInit {
+  
   map: any;
 
   ngOnInit(): void {

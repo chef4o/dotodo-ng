@@ -16,11 +16,6 @@
     padding-bottom: 1vw;
 }
 
-.content.about-us h2 {
-    font-size: 1.6vw;
-    padding-bottom: 2vw;
-}
-
 .content.about-us .main-info p {
     font-size: 1.2vw;
     font-weight: 300;
@@ -32,6 +27,8 @@
 }
 
 .location h2 {
+    font-size: 1.2vw;
+    padding: 0.8vw 0 1.6vw;
     text-align: right;
 }
 

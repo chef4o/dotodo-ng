@@ -66,22 +66,22 @@
                 </ng-container>
             </div>
 
-            <div class="repass">
-                <label htmlFor="repass">Repeat password</label>
+            <div class="rePassword">
+                <label htmlFor="rePassword">Repeat password</label>
                 <div class="form-input">
                     <i class="fa-solid fa-key"></i>
-                    <input id="repass" name="repass" type="password" #repassInput="ngModel" ngModel required />
+                    <input id="rePassword" name="rePassword" type="password" #rePasswordInput="ngModel" ngModel required />
                     <!-- more value props: 
                              onChange={changeHandler} 
                         onBlur={()=>
-                    focusHandler(FORM_FIELDS.repass)}
-                    class={validationErrors.repass && "error-field"} /> -->
+                    focusHandler(FORM_FIELDS.rePassword)}
+                    class={validationErrors.rePassword && "error-field"} /> -->
                 </div>
 
-                <ng-container *ngIf="repassInput.touched">
-                    <div *ngIf="repassInput.errors?.['required']" class="error auth">Field is required</div>
-                    <div *ngIf="!repassInput.errors?.['required'] 
-                        && repassInput.value.length >= 6 && repassInput.value != passwordInput.value"
+                <ng-container *ngIf="rePasswordInput.touched">
+                    <div *ngIf="rePasswordInput.errors?.['required']" class="error auth">Field is required</div>
+                    <div *ngIf="!rePasswordInput.errors?.['required'] 
+                        && rePasswordInput.value.length >= 6 && rePasswordInput.value != passwordInput.value"
                         class="error auth">Passwords must match</div>
                 </ng-container>
             </div>

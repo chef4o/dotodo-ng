@@ -10,6 +10,7 @@ import { MainModule } from './main/main.module';
 import { AuthModule } from './core/auth/auth.module';
 import { ErrorPagesModule } from './shared/error-handling/error-pages/error-pages.module';
 import { MainRoutingModule } from './main/main-routing.module';
+import { AppInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent],
@@ -23,6 +24,9 @@ import { MainRoutingModule } from './main/main-routing.module';
     HttpClientModule,
     AppRoutingModule,
     MainRoutingModule
+  ],
+  providers: [
+    AppInterceptorProvider
   ],
   bootstrap: [AppComponent],
 })

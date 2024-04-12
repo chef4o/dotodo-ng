@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register-modal',
@@ -9,18 +10,18 @@ import { NgForm } from '@angular/forms';
 export class RegisterModalComponent implements OnInit {
   @Output() hideAuthModalHandler: EventEmitter<void> = new EventEmitter<void>();
 
-  ngOnInit(): void {
+  constructor(private authService: AuthService) {}
 
-  }
+  ngOnInit(): void {}
 
   handleRegisterFormSubmit(form: NgForm) {
     if (form.invalid) {
       return;
     }
 
-    const value: { email: string; username: string; password: string; repass: string } = form.value;
-    form.setValue({ email: '', username: '', password: '', repass: '' });
-    console.log(value);
+    const { email, username, password, rePassword } = form.value;
+    this.authService.register(email, username, password, rePassword)
+    .subscribe(res => console.log(res));
   }
 
   hideModal() {

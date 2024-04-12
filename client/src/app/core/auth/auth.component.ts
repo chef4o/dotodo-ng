@@ -7,7 +7,6 @@ import { AuthModalService } from 'src/app/controllers/auth-modal.service';
   styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent {
-
   @Input() showLoginScreen!: boolean;
   @Input() showRegisterScreen!: boolean;
   @Input() isLoading!: boolean;

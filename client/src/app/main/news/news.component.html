@@ -5,7 +5,7 @@
             <li class="article" *ngFor="let article of news">
                 <h4><a href="{{article.href}}">{{article.header}}</a></h4>
                 <div>
-                    Posted on <a href="#">{{article.uploadedDate | date: 'd MMM yyyy'}}</a> in <a href="#">{{article.category}}</a>
+                    Posted on <a href="#">{{article.uploadDate | date: 'd MMM yyyy'}}</a> in <a href="#">{{article.category}}</a>
                 </div>
                 <a class="comments" href="#">{{article.comments.length}} Comments</a>
                 <p>{{article.content | shrinkToFit: 260 }}</p>

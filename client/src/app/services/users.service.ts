@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
-import { IUser } from '../shared/interfaces/user';
 
 const baseUrl = environment.apiUrl + '/users';
 
@@ -12,11 +11,11 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getAllUsers() {
-    return this.http.get<IUser[]>(baseUrl);
+    return this.http.get<any>(baseUrl);
   }
 
   getUserById(id: string) {
-    return this.http.get<IUser>(`${baseUrl}/${id}`);
+    return this.http.get<any>(`${baseUrl}/${id}`);
   }
 
   getUserByEmail(email: string) {

@@ -1,34 +1,32 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { SharedComponent } from './shared/shared.component';
 import { SharedModule } from './shared/shared.module';
 import { MainModule } from './main/main.module';
 import { AuthModule } from './core/auth/auth.module';
 import { ErrorPagesModule } from './shared/error-handling/error-pages/error-pages.module';
 import { MainRoutingModule } from './main/main-routing.module';
-import { AppInterceptorProvider } from './app.interceptor';
-import { AuthService } from './services/auth.service';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app'; // Import AngularFire
+import { environment } from '../environments/environment.development'; // Import your Firebase config from environment
 
 @NgModule({
-  declarations: [AppComponent, SharedComponent],
+  declarations: [AppComponent],
   imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MainRoutingModule,
     AuthModule,
     ErrorPagesModule,
     CoreModule,
     SharedModule,
     MainModule,
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MainRoutingModule
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig))
   ],
-  providers: [
-    AppInterceptorProvider, 
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

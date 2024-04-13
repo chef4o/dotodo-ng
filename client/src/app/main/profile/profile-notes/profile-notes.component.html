@@ -1,1 +1,17 @@
-<p>profile-notes works!</p>
+<div class="expiring-notes">
+    <h1>Notes close to expiry</h1>
+    <ng-container *ngIf="expiringNotes && expiringNotes.length > 0">
+        <ul class="notes-list">
+            <ng-container *ngFor="let note of expiringNotes">
+                <app-profile-note-details *ngIf="note?._id === activeNoteId"></app-profile-note-details>
+                <app-profile-note *ngIf="note?._id !== activeNoteId"></app-profile-note>
+            </ng-container>
+        </ul>
+    </ng-container>
+    <ng-container *ngIf="!expiringNotes">
+        <div class="error-page no-content">Looks like you don't have any notes yet. <br />
+            You can start from
+            <a routerLink="/notes">here.</a>
+        </div>
+    </ng-container>
+</div>

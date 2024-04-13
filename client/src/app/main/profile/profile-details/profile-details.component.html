@@ -1,0 +1,21 @@
+    <div class="user-details">
+        <div class="profile-details">
+            <div class="personal" *ngIf="user?.firstName || user?.lastName">
+                <p class="name">Name: {{user?.firstName}} {{user?.lastName}}</p>
+                <p class="username">Username: {{user?.username}}</p>
+                <p class="dateOfBirth" *ngIf="user?.dateOfBirth">Birthday: {{user?.dateOfBirth}}</p>
+            </div>
+
+            <div class="profile-image">
+                <!-- {{user?.imageUrl}} -->
+                <img src="https://t3.ftcdn.net/jpg/00/64/67/80/360_F_64678017_zUpiZFjj04cnLri7oADnyMH0XBYyQghG.jpg"
+                    alt="Profile page" />
+            </div>
+
+            <div class="contact">
+                <p class="email">Email: {{user?.email}}</p>
+                <p class="phoneNumber" *ngIf="user?.phoneNumber">Phone: {{user?.phoneNumber}}</p>
+                <p class="address" *ngIf="user?.address">Address: {{user?.address}}</p>
+            </div>
+        </div>
+    </div>

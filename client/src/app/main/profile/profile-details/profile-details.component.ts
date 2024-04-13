@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IUser } from 'src/app/shared/interfaces/user';
 
 @Component({
   selector: 'app-profile-details',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-details.component.css']
 })
 export class ProfileDetailsComponent {
-
+  @Input() activeNoteId!: string;
+  @Input() user!: IUser | null;
 }

@@ -6,14 +6,16 @@ import { RegisterModalComponent } from './register-modal/register-modal.componen
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LogoutComponent } from './logout/logout.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorHandlingModule } from 'src/app/shared/error-handling/error-handling.module';
 
 @NgModule({
-  declarations: [AuthComponent, LoginModalComponent, RegisterModalComponent, LogoutComponent],
-  imports: [
-    CommonModule,
-    SharedModule,
-    FormsModule, 
+  declarations: [
+    AuthComponent,
+    LoginModalComponent,
+    RegisterModalComponent,
+    LogoutComponent,
   ],
+  imports: [CommonModule, FormsModule, ErrorHandlingModule, SharedModule],
   exports: [AuthComponent],
 })
-export class AuthModule { }
+export class AuthModule {}

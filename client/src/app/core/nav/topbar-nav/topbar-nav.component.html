@@ -8,7 +8,7 @@
         <ng-container *ngTemplateOutlet="user ? loggedInTemplate : loggedOutTemplate"></ng-container>
 
         <ng-template #loggedInTemplate>
-            <li>
+            <li (click)="logout()">
                 <div>logout</div>
             </li>
         </ng-template>

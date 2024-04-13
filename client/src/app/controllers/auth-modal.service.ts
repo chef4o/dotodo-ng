@@ -12,22 +12,18 @@ export class AuthModalService {
   constructor(private loaderService: GlobalLoaderService) { }
 
   showLoginModal(): void {
-    this.loaderService.showLoader('login');
-
     this.showLoginScreen = true;
     this.showRegisterScreen = false;
-    this.isLoading = true;
   }
 
   showRegisterModal(): void {
-    this.loaderService.showLoader('register');
-
     this.showLoginScreen = false;
     this.showRegisterScreen = true;
-    this.isLoading = true;
   }
 
   hideAuthModal(): void {
+    this.loaderService.hide();
+
     this.showLoginScreen = false;
     this.showRegisterScreen = false;
     this.isLoading = false;

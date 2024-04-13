@@ -49,7 +49,7 @@
 ::ng-deep .auth-form .username,
 ::ng-deep .auth-form .email,
 ::ng-deep .auth-form .password,
-::ng-deep .auth-form .repass {
+::ng-deep .auth-form .rePassword {
     position: relative;
     display: flex;
     flex-direction: column;

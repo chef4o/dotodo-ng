@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthModalService } from 'src/app/controllers/auth-modal.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { IAuthUser } from 'src/app/shared/interfaces/authUser';
+import { IUser } from 'src/app/shared/interfaces/user';
 
 @Component({
   selector: 'app-topbar-nav',
@@ -9,21 +9,26 @@ import { IAuthUser } from 'src/app/shared/interfaces/authUser';
   styleUrls: ['./topbar-nav.component.css'],
 })
 export class TopbarNavComponent implements OnInit {
-  @Input() user!: IAuthUser | null;
+  @Input() user!: IUser | null;
 
-  constructor(private authService: AuthService, private authModalService: AuthModalService) {}
+  constructor(
+    private authService: AuthService,
+    private authModalService: AuthModalService
+  ) {}
 
   ngOnInit(): void {
-    this.authService.user$.subscribe(user => {
-      this.user = user;
-    });
+    this.user = this.authService.user;
   }
 
   showLoginModal(): void {
     this.authModalService.showLoginModal();
   }
 
-  showRegisterModal(): void { 
+  showRegisterModal(): void {
     this.authModalService.showRegisterModal();
+  }
+
+  logout(): void {
+    this.authService.logout();
   }
 }

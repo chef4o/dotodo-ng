@@ -1,9 +1,9 @@
 <div class="nav">
-    <app-auth [showLoginScreen]="getAuthService().showLoginScreen" [showRegisterScreen]="getAuthService().showRegisterScreen"
-    [isLoading]="getAuthService().isLoading"></app-auth>
-    <app-topbar-nav [user]="user">
+    <app-auth [showLoginScreen]="getAuthService().showLoginScreen"
+        [showRegisterScreen]="getAuthService().showRegisterScreen"></app-auth>
+    <app-topbar-nav [user]="userData">
     </app-topbar-nav>
-    <app-sidebar-nav [user]="user">
+    <app-sidebar-nav [user]="userData">
     </app-sidebar-nav>
     <app-bottombar-nav>
     </app-bottombar-nav>

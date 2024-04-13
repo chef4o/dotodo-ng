@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthModalService } from 'src/app/controllers/auth-modal.service';
+import { GlobalLoaderService } from 'src/app/services/global-loader.service';
+import { ShrinkToFitPipe } from 'src/app/shared/pipes/shrink-to-fit.pipe';
 
 @Component({
   selector: 'app-auth',
@@ -11,9 +13,9 @@ export class AuthComponent {
   @Input() showRegisterScreen!: boolean;
   @Input() isLoading!: boolean;
 
-  constructor(private authService: AuthModalService) {}
+  constructor(private authModalService: AuthModalService) {}
 
   hideAuthModalHandler(): void {
-    this.authService.hideAuthModal();
+    this.authModalService.hideAuthModal();
   }
 }

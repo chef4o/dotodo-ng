@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,7 @@ import { AuthModule } from './core/auth/auth.module';
 import { ErrorPagesModule } from './shared/error-handling/error-pages/error-pages.module';
 import { MainRoutingModule } from './main/main-routing.module';
 import { AppInterceptorProvider } from './app.interceptor';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [AppComponent, SharedComponent],
@@ -26,7 +27,7 @@ import { AppInterceptorProvider } from './app.interceptor';
     MainRoutingModule
   ],
   providers: [
-    AppInterceptorProvider
+    AppInterceptorProvider, 
   ],
   bootstrap: [AppComponent],
 })

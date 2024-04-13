@@ -4,11 +4,11 @@ export interface IUser {
     lastName: string,
     email: string,
     username: string,
+    password: string,
     dateOfBirth: Date,
     phoneNumber: string,
     createdAt: Date,
     updatedAt: Date,
-    password: string,
     imageUrl: string,
     address: {
       streetNumber: string,

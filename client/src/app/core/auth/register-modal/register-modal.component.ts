@@ -19,9 +19,9 @@ export class RegisterModalComponent implements OnInit {
       return;
     }
 
-    const { email, username, password, rePassword } = form.value;
-    this.authService.register(email, username, password, rePassword)
-    .subscribe(res => console.log(res));
+    const { email, username, password } = form.value;
+    this.authService.register(email, username, password).subscribe();
+    this.hideModal();
   }
 
   hideModal() {

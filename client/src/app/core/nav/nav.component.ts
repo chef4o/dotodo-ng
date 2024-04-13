@@ -1,23 +1,34 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { AuthModalService } from 'src/app/controllers/auth-modal.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { IAuthUser } from 'src/app/shared/interfaces/authUser';
+import { IUser } from 'src/app/shared/interfaces/user';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnDestroy {
+  userData: IUser | null = null;
+  private userSubscription: Subscription;
 
-  @Input() user: IAuthUser | null = null; 
-
-  constructor(private authService: AuthService, private authModalService: AuthModalService) {}
-
-  ngOnInit(): void {
-    this.authService.user$.subscribe(user => {
-      this.user = user;
+  constructor(
+    private authService: AuthService,
+    private authModalService: AuthModalService
+  ) {
+    this.userSubscription = this.authService.user$.subscribe({
+      next: (userData: IUser | null) => {
+        this.userData = userData;
+      },
+      error: (error: any) => {
+        console.error('Error occurred:', error);
+      }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.userSubscription.unsubscribe();
   }
 
   getAuthService(): AuthModalService {

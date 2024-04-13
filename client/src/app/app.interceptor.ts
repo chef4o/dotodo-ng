@@ -18,8 +18,8 @@ export class AppInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    if (req.url.startsWith('api')) {
-      req = req.clone({ url: req.url.replace('api', apiUrl) });
+    if (req.url.startsWith('/api')) {
+      req = req.clone({ url: req.url.replace('/api', apiUrl), withCredentials: true });
     }
     return next.handle(req);
   }

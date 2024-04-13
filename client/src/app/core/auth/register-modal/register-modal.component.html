@@ -61,8 +61,7 @@
                     <div *ngIf="passwordInput.errors?.['required']" class="error auth register">Password is required
                     </div>
                     <div *ngIf="passwordInput.errors?.['minlength']" class="error auth register">Password must be at
-                        leats 6
-                        characters long</div>
+                        leats 6 characters long</div>
                 </ng-container>
             </div>
 
@@ -70,7 +69,8 @@
                 <label htmlFor="rePassword">Repeat password</label>
                 <div class="form-input">
                     <i class="fa-solid fa-key"></i>
-                    <input id="rePassword" name="rePassword" type="password" #rePasswordInput="ngModel" ngModel required />
+                    <input id="rePassword" name="rePassword" type="password" #rePasswordInput="ngModel" ngModel
+                        required />
                     <!-- more value props: 
                              onChange={changeHandler} 
                         onBlur={()=>

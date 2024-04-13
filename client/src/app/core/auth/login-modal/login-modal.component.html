@@ -2,17 +2,17 @@
     <button class="xmark" (click)="hideModal()"><i class="fa-solid fa-xmark"></i></button>
 
     <div class="auth-fields">
-        <div class="username">
-            <label for="username">Username/Email</label>
+        <div class="email">
+            <label for="email">Email</label>
             <div class="form-input">
                 <i class="fa-solid fa-user"></i>
-                <input ngModel id="username" name="username" type="text" autocomplete="off" #usernameInput="ngModel"
+                <input ngModel id="email" name="email" type="text" autocomplete="off" #emailInput="ngModel"
                     required />
             </div>
 
-            <ng-container *ngIf="usernameInput.touched">
-                <div *ngIf="usernameInput.errors?.['required']" class="error auth login username">
-                    Username or email is required
+            <ng-container *ngIf="emailInput.touched">
+                <div *ngIf="emailInput.errors?.['required']" class="error auth login email">
+                    Email is required
                 </div>
             </ng-container>
         </div>

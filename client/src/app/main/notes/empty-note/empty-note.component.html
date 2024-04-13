@@ -1,7 +1,7 @@
-<div class="note new">
-    <input class="title" placeholder="Add title" />
+<form #emptyNoteForm="ngForm" class="note new" (ngSubmit)="handleNewNoteSubmit(emptyNoteForm)">
+    <input ngModel class="title" name="title" type="text" autocomplete="off" placeholder="Add title" #titleInput="ngModel"/>
 
-    <input class="note-text" placeholder="Add text" />
+    <input class="note-text" name="content" placeholder="Add text" />
 
     <button class="create">Create</button>
-</div>
+</form>

@@ -2,7 +2,6 @@
     <p class="greeting" *ngIf="user">
         Hello, {{ user.firstName ? user.firstName : user.username }}
     </p>
-
     <ul class="top-bar-controls">
 
         <ng-container *ngTemplateOutlet="user ? loggedInTemplate : loggedOutTemplate"></ng-container>

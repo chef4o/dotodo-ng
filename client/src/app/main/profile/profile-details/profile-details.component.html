@@ -1,7 +1,7 @@
     <div class="user-details">
         <div class="profile-details">
-            <div class="personal" *ngIf="user?.firstName || user?.lastName">
-                <p class="name">Name: {{user?.firstName}} {{user?.lastName}}</p>
+            <div class="personal">
+                <p class="name" *ngIf="user?.firstName || user?.lastName">Name: {{user?.firstName}} {{user?.lastName}}</p>
                 <p class="username">Username: {{user?.username}}</p>
                 <p class="dateOfBirth" *ngIf="user?.dateOfBirth">Birthday: {{user?.dateOfBirth}}</p>
             </div>

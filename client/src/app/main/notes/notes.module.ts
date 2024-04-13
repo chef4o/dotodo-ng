@@ -5,10 +5,11 @@ import { EmptyNoteComponent } from './empty-note/empty-note.component';
 import { NoteItemComponent } from './note-item/note-item.component';
 import { ErrorPagesModule } from 'src/app/shared/error-handling/error-pages/error-pages.module';
 import { NotesRoutingModule } from './notes-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [NotesComponent, EmptyNoteComponent, NoteItemComponent],
-  imports: [CommonModule, ErrorPagesModule, NotesRoutingModule],
+  imports: [CommonModule, FormsModule, ErrorPagesModule, NotesRoutingModule],
   exports: [NotesComponent],
 })
 export class NotesModule {}

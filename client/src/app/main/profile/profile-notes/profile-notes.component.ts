@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { INote } from 'src/app/shared/interfaces/note';
 import { IUser } from 'src/app/shared/interfaces/user';
 
